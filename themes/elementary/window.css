@@ -15,6 +15,10 @@ html, body {
     border-radius: 3px;
     border-top: 1px solid #eaeaea;
     background:  rgba(222, 222, 222, 1);
+    border: 1px solid #cccccc;
+    border-width: 0 0 1px 0;
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.20);
+    background: linear-gradient(to bottom, rgba(222, 222, 222, 1) 0%, rgba(184, 184, 184, 1) 100%);
 }
 
 #controls button {
@@ -39,7 +43,7 @@ webview {
     -webkit-app-region: no-drag;
     z-index: 100;
     position: absolute;
-    top: 44px;
+    top: 48px;
 }
 
 .stars, #min-btn, #max-btn {

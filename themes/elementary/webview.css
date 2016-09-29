@@ -15,3 +15,10 @@ body {
   top: -8%!important;
   right: 9%!important;
 }
+.popover{
+  left: 20px!important;
+  top: 4px!important;
+}
+#wunderlist-base .popover.bottom .arrow{
+  display: none!important;
+}
