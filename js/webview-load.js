@@ -30,3 +30,6 @@ var doc  = require('electron').ipcRenderer;
 doc.on('change-theme', setCustomTheme);
 doc.on("click-bell", function(){ $("a[data-path='activities']")[0].click() })
 doc.on("click-conversations", function(){ $("a[data-path='conversations']")[0].click() })
+doc.on("click-sort", function(){ $("[data-menu='sort']")[0].click() })
+doc.on("click-more", function(){ $("[data-menu='more']")[0].click() })
+doc.on("click-share", function(){ $("[data-menu='share']")[0].click() })

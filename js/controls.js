@@ -55,13 +55,25 @@ var setCustomTheme = function(theme){
   console.log("Finished custom theme - window!")
 }
 
-var clickBell = function(){
+jq(document).on("click", "#bell", function(){
   getWebview().send('click-bell');
-}
-
-var clickConversations = function(){
+});
+jq(document).on("click", "#conv", function(){
   getWebview().send("click-conversations")
-}
+});
+
+jq(document).on("click", "#sort", function(e, v){
+  getWebview().send("click-sort", v)
+});
+
+jq(document).on("click", "#more", function(e, v){
+  getWebview().send("click-more", v)
+});
+
+jq(document).on("click", "#share", function(e, v){
+  getWebview().send("click-share", v)
+});
+
 
 jq(document).on("change", "#theme-selector", function(e) {
     var theme = jq(e.target).find("option:selected").text();
@@ -71,8 +83,6 @@ jq(document).on("change", "#theme-selector", function(e) {
 
 var onReady = function(){
   var theme = localStorage.getItem("theme") || "elementary";
-  jq("#bell").on("click", clickBell);
-  jq("#conv").on("click", clickConversations);
   jq('#theme-selector option').removeAttr("selected");
   jq('#theme-selector option:contains("'+theme+'")').attr("selected", "selected");
   jq("#theme-selector").trigger("change")

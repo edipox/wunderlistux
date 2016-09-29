@@ -62,3 +62,13 @@ html, body{
   z-index: 110;
   -webkit-app-region: no-drag;
 }
+
+#controls i{
+  -webkit-app-region: no-drag;
+  font-size: 18px;
+  padding: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+  color: #555;
+  font-weight: 100;
+}

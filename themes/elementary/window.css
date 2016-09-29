@@ -11,7 +11,7 @@ html, body {
     padding: 0 3px 3px;
     text-shadow: 0 1px rgba(0, 0, 0, 0.4);
     top: 0;
-    height: 22px;
+    height: 44px;
     border-radius: 3px;
     border-top: 1px solid #eaeaea;
     background:  rgba(222, 222, 222, 1);
@@ -39,9 +39,25 @@ webview {
     -webkit-app-region: no-drag;
     z-index: 100;
     position: absolute;
-    top: 18px;
+    top: 44px;
 }
 
 .stars, #min-btn, #max-btn {
     display: none;
+}
+
+#share, #sort, #more{
+  float: right;
+}
+
+#conv, #bell{
+  float: left;
+}
+
+#controls #bell{
+  margin-left: 13%!important;
+}
+
+#controls i.last{
+  margin-right: 59px!important;
 }
