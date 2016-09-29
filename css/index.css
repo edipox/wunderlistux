@@ -1,0 +1,64 @@
+html,
+header {
+    -webkit-app-region: drag;
+    -ms-overflow-style: scrollbar;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+  border: 2px groove dark-gray;
+  background: dark-gray!important;
+  border-radius: 2px;
+}
+
+
+input,
+button,
+textarea, a{
+    -webkit-app-region: no-drag;
+}
+
+header {
+    height: 50px;
+}
+
+html, body{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#controls #settings-btn{
+  border-radius: 25px;
+  padding: 5px;
+  position: absolute;
+  left: 15px;
+  top: 12px;
+}
+
+#settings-panel{
+  width: 83px;
+  height: 50px;
+  background: white;
+  border-radius: 5px;
+  margin: auto;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 101;
+  text-align: right;
+  -webkit-app-region: no-drag;
+  border: 1px solid whitesmoke;
+}
+
+#theme-selector{
+  overflow-y: hidden;
+  border: none;
+  background: white;
+  padding: 7px;
+  border-radius: 4px;
+  z-index: 110;
+  -webkit-app-region: no-drag;
+}

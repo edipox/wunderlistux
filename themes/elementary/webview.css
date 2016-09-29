@@ -1,0 +1,139 @@
+a, input, textarea, button {
+    -webkit-app-region: no-drag!important;
+}
+
+body {
+    -webkit-app-region: drag!important;
+}
+
+#list-toolbar{
+  background: white!important;
+  position: relative;
+  position: absolute;
+  top: -32px;
+  left: 34%;
+  z-index: 1;
+  border-radius: 4px;
+  box-shadow: 0 0 10px #bbb;
+  max-height: 38px!important;
+  min-height: 38px!important;
+}
+#list-toolbar .title{
+  display: none;
+}
+#list-toolbar .tab-text{
+  color: gray!important;
+}
+#list-toolbar a svg{
+  fill:gray!important;
+}
+#headerbar{
+  width: 100%;
+  z-index: 1;
+  width: 100%;
+  position: absolute;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  height: 17px;
+  padding: 0 3px 3px;
+  border: 1px solid #cccccc;
+  border-width: 0 0 1px 0;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.20);
+  background: linear-gradient(to bottom, rgba(222, 222, 222, 1) 0%, rgba(184, 184, 184, 1) 100%);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+  icon-shadow: 0 1px rgba(0, 0, 0, 0.4);
+  top: 0;
+  height: 15px;
+  /*border-radius: 3px;*/
+  /*border-top: 1px solid #eaeaea;*/
+
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+
+  height: 32px;
+}
+
+#user-toolbar{margin-left: 50px;}
+#search-toolbar, .stream-counts, #user-toolbar{
+    margin-top: -50px!important;
+}
+/*#user-toolbar .user, #search-toolbar, .stream-counts, #user-toolbar{
+  height: 26px!important;
+}*/
+#search-toolbar{
+  position: absolute!important;
+  right: -181%!important;
+  background: #ececec!important;
+  padding: 0px!important;
+  height: 24px!important;
+  margin-top: -33px!important;
+  border-radius: 5px!important;
+}
+#search-toolbar input.search-input{
+  height: 24px!important;
+  padding: 5px!important;
+  color: gray!important;
+  font-size: 16px!important;
+}
+#search-toolbar .search-icon-wrapper, #search-toolbar .list-toggle{
+  padding-top: 2px!important;
+  fill: gray!important;
+}
+#lists{
+  overflow: visible!important;
+}
+.toggle-icon{
+  display: none!important;
+}
+.stream-counts{
+  right: -94%!important;
+  position: relative!important;
+  overflow: visible!important;
+  margin-top: -27px!important;
+}
+/*#wunderlist-base #tasks .tasks-scroll*/
+#tasks{
+    margin-top: 38px;
+    overflow: visible!important;
+}
+#lists{ background: none!important; }
+#lists .lists-scroll{
+  background: white!important;
+}
+/*#wunderlist-base #tasks .tasks-scroll {
+    margin-top: 38px!important;
+}*/
+#wunderlist-base .main-interface {
+    overflow: visible!important;
+    padding-top: 34px!important;
+}
+.avatar.medium{
+  height: 20px!important;
+  width: 20px!important;
+
+}
+.avatar.medium img{
+  height: 20px!important;
+  width: 20px!important;
+}
+#user-toolbar .user-avatar{
+    padding-top: 2px;
+}
+#user-toolbar .user-name{
+  font-size: 13px!important;
+}
+#user-toolbar .conversations-count, #user-toolbar .activities-count {
+  margin-top: 32px;
+}
+#detail{
+  box-shadow: 0 0 10px #5a5a5a;
+}
+.actionBar .tab{
+  padding:1px!important;
+}
+.actionBar-top{
+  top:40px!important;
+}
+#detail .inner {
+    height: 91vh!important;
+}

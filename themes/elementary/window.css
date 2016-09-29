@@ -1,0 +1,47 @@
+html, body {
+    background: rgba(140, 140, 140, 0.5);
+}
+
+#controls {
+    z-index: 99;
+    width: 100%;
+    position: absolute;
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
+    padding: 0 3px 3px;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+    top: 0;
+    height: 22px;
+    border-radius: 3px;
+    border-top: 1px solid #eaeaea;
+    background:  rgba(222, 222, 222, 1);
+}
+
+#controls button {
+    border-radius: 99px;
+    padding: 7px;
+    border: none;
+    margin: 3px;
+}
+
+#controls button#close-btn {
+    background: none;
+    position: absolute;
+    left: 16px;
+    top: 12px;
+    background-image: url("images/close.png");
+}
+
+webview {
+    height: 100%;
+    width: 100%;
+    /*padding-top: 47px;*/
+    -webkit-app-region: no-drag;
+    z-index: 100;
+    position: absolute;
+    top: 18px;
+}
+
+.stars, #min-btn, #max-btn {
+    display: none;
+}
