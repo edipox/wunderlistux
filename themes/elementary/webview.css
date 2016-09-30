@@ -22,3 +22,10 @@ body {
 #wunderlist-base .popover.bottom .arrow{
   display: none!important;
 }
+#detail {
+  box-shadow: -4px 18px 33px -6px rgba(0,0,0,0.55)!important;
+  border-radius: 0px 0px 0px 3px!important;
+}
+#detail, #detail .inner{
+  height: 91vh!important;
+}
