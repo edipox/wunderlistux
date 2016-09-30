@@ -63,9 +63,9 @@ html, body{
   -webkit-app-region: no-drag;
 }
 
-#controls i{
+#controls .pictogram-icon{
   -webkit-app-region: no-drag;
-  font-size: 18px;
+  font-size: 21px;
   padding: 14px;
   padding-right: 15px;
   padding-left: 15px;

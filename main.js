@@ -16,9 +16,9 @@ app.on('ready', function() {
     width: size.width,
     height: size.height,
     frame: false,
-/*    minWidth: size.width,
-    minHeight: size.height,
-    maxWidth: size.width,
+    minWidth: 400,
+    minHeight: 500,
+    /* maxWidth: size.width,
     maxHeight: size.height,*/
     radii: [10,10,10,10]
   });

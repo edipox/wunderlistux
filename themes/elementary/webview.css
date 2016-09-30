@@ -12,8 +12,8 @@ body {
 }
 #list-toolbar{
   position: absolute!important;
-  top: -8%!important;
-  right: 9%!important;
+  top: -48px!important;
+  right: 32px!important;
 }
 .popover{
   left: 20px!important;

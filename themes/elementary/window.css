@@ -59,9 +59,9 @@ webview {
 }
 
 #controls #bell{
-  margin-left: 13%!important;
+  margin-left: 35px!important;
 }
 
-#controls i.last{
-  margin-right: 59px!important;
+#controls .pictogram-icon.last{
+  margin-right: 35px!important;
 }
