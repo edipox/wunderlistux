@@ -16,10 +16,10 @@ app.on('ready', function() {
     width: size.width,
     height: size.height,
     frame: false,
-    minWidth: size.width,
+/*    minWidth: size.width,
     minHeight: size.height,
     maxWidth: size.width,
-    maxHeight: size.height,
+    maxHeight: size.height,*/
     radii: [10,10,10,10]
   });
 
