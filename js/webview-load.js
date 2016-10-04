@@ -1,6 +1,5 @@
 
 window.setCustomTheme = function(_, theme){
-  console.log("starting custom theme - WEBVIEW..")
   $('#headerbar').remove();
   $("body").prepend("<div id='headerbar'></div>");
   var THEME_CONTAINER_ID = "webview_theme_container";
@@ -12,8 +11,7 @@ window.setCustomTheme = function(_, theme){
   fs.readFile("./themes/"+theme+"/webview.css", 'utf8', function (err, content) {
     createOrUpdate(THEME_CONTAINER_ID, content, "style", "body")
   });
-  localStorage.setItem("custom_electron_theme", theme)
-  console.log("Finished custom theme - WEBVIEW!")
+  localStorage.setItem("custom_electron_theme", theme);
 }
 
 window.onload = function() {
@@ -21,9 +19,6 @@ window.onload = function() {
     var onReady = function() {
       setCustomTheme(null, localStorage.getItem("custom_electron_theme") || "elementary");
     };
-    $(document).ready(onReady).delay(1200, onReady).on("turbolinks:load", onReady);
-    // $(document).on("change-theme", setCustomTheme);
-    // $(document).on("click-bell", function(){ console.log("BC - document"); $("a.activities-count").click(); })
 }
 
 var doc  = require('electron').ipcRenderer;

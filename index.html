@@ -2,10 +2,10 @@
 <html>
   <head>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="themes/elementary/window.css"/>
     <script src="js/jquery-3.1.0.min.js"></script>
     <link rel="stylesheet" href="css/pictograms.min.css">
   <body>
-
     <webview src="https://www.wunderlist.com/#/lists/inbox" autosize="on" preload="js/webview-load.js"  id="webview"  ></webview>
     <div id="controls">
       <button id="close-btn"></button>
@@ -20,14 +20,16 @@
       <span id="sort" class="h1 pictogram-icon wundercon icon-sort-az" title="sort-az"></span>
     </div>
 
-    <div id="popup">
+    <!-- <div id="popup">
       <div id="settings-panel">
         <select id="theme-selector">
           <option value="elementary">elementary</option>
           <option value="mac">mac</option>
         </select>
       </div>
-    </div>
+    </div> -->
   </body>
+  <script src="js/utils.js"></script>
+  <script src="js/onload.js"></script>
   <script src="js/controls.js"></script>
 </html>
