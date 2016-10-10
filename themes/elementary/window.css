@@ -33,7 +33,7 @@ html, body {
     position: absolute;
     left: 16px;
     top: 12px;
-    background-image: url("images/close.png");
+    background-image: url("images/close-symbolic.svg");
 }
 
 webview {
