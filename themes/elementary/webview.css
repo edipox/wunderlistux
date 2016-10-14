@@ -29,3 +29,6 @@ body {
 #detail, #detail .inner{
   height: 91vh!important;
 }
+#lists .sidebarActions{
+  margin-bottom: 48px!important;
+}
