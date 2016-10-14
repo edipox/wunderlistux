@@ -15,6 +15,7 @@ html {
 
 input,
 button,
+img,
 textarea, a{
     -webkit-app-region: no-drag;
 }
@@ -63,7 +64,7 @@ html, body{
   -webkit-app-region: no-drag;
 }
 
-#controls .pictogram-icon{
+#controls .pictogram-icon, #controls #close-btn{
   -webkit-app-region: no-drag;
   font-size: 21px;
   padding: 14px;
@@ -72,4 +73,7 @@ html, body{
   color: #585858;
   font-weight: 100;
   text-shadow: 0px 0px 3px rgb(226, 226, 226);
+  width: 17px;
+  height: 17px;
+
 }
