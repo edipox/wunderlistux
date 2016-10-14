@@ -27,7 +27,7 @@ Or just copy the wunderlistux.desktop file from the release you downloaded. You 
 ## Thank you!
 If you like the app please :star: the github project.
 
-If you supre liked it  [buy me a coffee :coffee:](http://ko-fi.com/A553N9). 
+If you super liked it  [buy me a coffee :coffee:](http://ko-fi.com/A553N9). 
 
 If you disked it you still could :star: the github project and [buy me a coffee :coffee:](http://ko-fi.com/A553N9) :)
 
