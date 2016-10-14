@@ -21,36 +21,35 @@ html, body {
     background: linear-gradient(to bottom, rgba(222, 222, 222, 1) 0%, rgba(184, 184, 184, 1) 100%);
 }
 
-#controls button {
+#controls button, #controls img {
     border-radius: 99px;
     padding: 7px;
     border: none;
     margin: 3px;
 }
 
-#controls button#close-btn {
+#controls #close-btn {
     background: none;
     position: absolute;
-    left: 16px;
-    top: 12px;
-    background-image: url("images/close-symbolic.svg");
+    left: 0;
+    top: 0;
+    margin-left: 4px!important;
 }
 
 webview {
     height: 100%;
     width: 100%;
-    /*padding-top: 47px;*/
     -webkit-app-region: no-drag;
     z-index: 100;
     position: absolute;
     top: 48px;
 }
 
-.stars, #min-btn, #max-btn {
+.stars, #min-btn {
     display: none;
 }
 
-#share, #sort, #more{
+#share, #sort, #more, #max-btn{
   float: right;
 }
 
@@ -59,9 +58,15 @@ webview {
 }
 
 #controls #bell{
-  margin-left: 35px!important;
+  margin: 0!important;
+  margin-left: 46px!important;
+  height: 22px!important;
+  width: 23px!important;
 }
 
 #controls .pictogram-icon.last{
-  margin-right: 35px!important;
+  margin-right: 8px!important;
+}
+#controls #max-btn{
+  transform: scaleX(-1);
 }
