@@ -77,3 +77,12 @@ html, body{
   height: 17px;
 
 }
+
+#controls-container{
+  height: 46px;
+  padding: 1px;
+  background: #737373;
+  display: flex;
+  padding-top: 0;
+  padding-bottom: 2px;
+}

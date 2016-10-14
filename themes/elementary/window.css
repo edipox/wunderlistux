@@ -4,21 +4,28 @@ html, body {
 
 #controls {
     z-index: 99;
-    width: 100%;
+    /*width: 98.85%;*/
     position: absolute;
     -webkit-app-region: drag;
     -webkit-user-select: none;
     padding: 0 3px 3px;
     text-shadow: 0 1px rgba(0, 0, 0, 0.4);
-    top: 0;
-    height: 44px;
+    top: 1px;
+    /*height: 42px;*/
     border-radius: 3px;
-    border-top: 1px solid #eaeaea;
+    /*border-top: 1px solid #eaeaea;*/
     background:  rgba(222, 222, 222, 1);
-    border: 1px solid #cccccc;
+    /*border: 1px solid #cccccc;*/
     border-width: 0 0 1px 0;
-    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.20);
+    /*box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.20);*/
     background: linear-gradient(to bottom, rgba(222, 222, 222, 1) 0%, rgba(184, 184, 184, 1) 100%);
+
+    border: 1px solid #efefef;
+    border-bottom: 1px #d2d2d2 ridge;
+    /*box-shadow: none;*/
+    height: 41px;
+    position: relative;
+    width: 100%;
 }
 
 #controls button, #controls img {
@@ -26,6 +33,7 @@ html, body {
     padding: 7px;
     border: none;
     margin: 3px;
+    margin-top: 0;
 }
 
 #controls #close-btn {
@@ -62,6 +70,7 @@ webview {
   margin-left: 46px!important;
   height: 22px!important;
   width: 23px!important;
+  padding-top: 12px;
 }
 
 #controls .pictogram-icon.last{
