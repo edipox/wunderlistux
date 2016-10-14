@@ -3,8 +3,10 @@ An electron wrapper for wunderlist made with :heart: for Linux (specially for [e
 
 
 ## Screenshots
-Screenshots taken in [elementary OS Loki](http://elementary.io)
+Screenshots taken in the most awesome indie OS: [elementary OS Loki](http://elementary.io)
 
+
+![Screenshots](/images/wunderlistux.png)
 
 
 ## Install
@@ -29,3 +31,4 @@ Or just copy the wunderlistux.desktop file from the release you downloaded. You 
 ## Credits
 * Those amazing icons where stolen from [elementary OS](http://elementary.io). Here is the [github project](https://github.com/elementary/icons). I think those were made by [Daniel Foré](https://github.com/danrabbit) and [Sam Hewitt](https://github.com/snwh).
 * Inspired by [Caprine](https://github.com/sindresorhus/caprine) and [Skype-Electron](https://github.com/GyozaGuy/Skype-Electron)
+* App icon from https://www.iconfinder.com/megavyto98

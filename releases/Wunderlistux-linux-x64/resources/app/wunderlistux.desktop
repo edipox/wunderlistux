@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Wunderlistux
+Exec=/path/to/Wunderlistux-linux-x64/Wunderlistux
+Terminal=false
+Type=Application
+Icon=/path/to/Wunderlistux-linux-x64/resources/app/images/wunderlist.png

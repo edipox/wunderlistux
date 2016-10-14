@@ -4,10 +4,9 @@ var onWebviewReady = function() {
     setCustomTheme(theme);
   }
   jq.wait = function(ms) {
-    console.warn(ms)
-      var defer = jq.Deferred();
-      setTimeout(function() { defer.resolve(); }, ms);
-      return defer;
+    var defer = jq.Deferred();
+    setTimeout(function() { defer.resolve(); }, ms);
+    return defer;
   };
   jq.wait(100).then(onLoaded);
   jq.wait(300).then(onLoaded);
