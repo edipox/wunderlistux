@@ -1,5 +1,16 @@
 
+var loadJQuery = function(){
+  if(window.$ === undefined)
+    try {
+      window.$ = window.jQuery = require(process.resourcesPath+
+        "/jquery-3.1.0.min.js");
+    } catch(err) {
+      window.$ = window.jQuery = require("./jquery-3.1.0.min.js");
+    }
+}
+
 window.setCustomTheme = function(_, theme){
+  loadJQuery()
   $('#headerbar').remove();
   $("body").prepend("<div id='headerbar'></div>");
   var THEME_CONTAINER_ID = "webview_theme_container";
@@ -8,14 +19,20 @@ window.setCustomTheme = function(_, theme){
     $('#'+id).remove();
     $('<'+type+' id="'+id+'">'+content+'</'+type+'>').appendTo(appender);
   }
-  fs.readFile("./themes/"+theme+"/webview.css", 'utf8', function (err, content) {
-    createOrUpdate(THEME_CONTAINER_ID, content, "style", "body")
+  fs.readFile(process.resourcesPath+"/app/themes/"+theme+"/webview.css", 'utf8', function (err, content) {
+    if(err){
+      fs.readFile("./themes/"+theme+"/webview.css", 'utf8', function (err, content) {
+        createOrUpdate(THEME_CONTAINER_ID, content, "style", "body")
+      });
+    }else{
+      createOrUpdate(THEME_CONTAINER_ID, content, "style", "body")
+    }
   });
   localStorage.setItem("custom_electron_theme", theme);
 }
 
 window.onload = function() {
-    window.$ = window.jQuery = require('./jquery-3.1.0.min.js');
+    loadJQuery()
     var onReady = function() {
       setCustomTheme(null, localStorage.getItem("custom_electron_theme") || "elementary");
     };
