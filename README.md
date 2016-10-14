@@ -3,7 +3,7 @@ An electron wrapper for wunderlist made with :heart: for Linux (specially for [e
 
 
 ## Screenshots
-Screenshots taken in the most awesome indie OS: [elementary OS Loki](http://elementary.io)
+Screenshots taken in the most awesome indie OS: [elementary OS (Loki)](http://elementary.io)
 
 
 ![Screenshots](/images/wunderlistux.png)
