@@ -24,6 +24,13 @@ Icon=/path/to/Wunderlistux-linux-x64/resources/app/images/wunderlist.png
 ```
 Or just copy the wunderlistux.desktop file from the release you downloaded. You have to edit the file anyway to fix the paths.
 
+## Thank you!
+If you like the app please :star: the github project.
+
+If you supre liked it  [buy me a coffee :coffee:](http://ko-fi.com/A553N9). 
+
+If you disked it you still could :star: the github project and [buy me a coffee :coffee:](http://ko-fi.com/A553N9) :)
+
 ## TODO
 * Color picker to customize headerbar.
 * Add support for other OSs.
