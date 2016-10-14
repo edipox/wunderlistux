@@ -75,7 +75,7 @@
        id="rect20747"
        rx="0.38461545"
        ry="0.37878788"
-       style="color:#000000;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
+       style="color:#000000;fill:#585858;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
        width="2.0000002"
        x="474.0004"
        y="111" />
@@ -84,7 +84,7 @@
        id="rect20749"
        rx="0.38461545"
        ry="0.37878788"
-       style="color:#000000;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
+       style="color:#000000;fill:#585858;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
        width="2.0000002"
        x="474.0004"
        y="115.01562" />
@@ -93,13 +93,13 @@
        id="rect20751"
        rx="0.38461545"
        ry="0.37878788"
-       style="color:#000000;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
+       style="color:#000000;fill:#585858;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
        width="2.0000002"
        x="474.0004"
        y="119" />
     <path
        d="m 480.0004,111 0,4 -3.0625,0 5.125,5.78125 5.125,-5.78125 -3.1875,0 0,-4 z"
        id="rect20753"
-       style="color:#000000;fill:#bebebe;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new" />
+       style="color:#000000;fill:#585858;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new" />
   </g>
 </svg>
