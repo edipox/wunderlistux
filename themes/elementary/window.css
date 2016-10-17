@@ -79,3 +79,23 @@ webview {
 #controls #max-btn{
   transform: scaleX(-1);
 }
+#controls #buttons{
+  border: 1px solid rgba(128, 128, 128, 0.82);
+  position: absolute;
+  right: 60px;
+  margin: 6px;
+  border-radius: 3px;
+}
+#controls #buttons img:last-child{
+  border-left: none;
+}
+
+#controls #buttons img{
+  padding: 6px;
+  margin: 0;
+  padding-right: 9px;
+  padding-left: 9px;
+  border-left: 1px solid rgba(128, 128, 128, 0.82);
+  border-radius: 0;
+  box-shadow: inset 0px 0px 20px -8px rgba(132, 114, 114, 0.45);
+}
