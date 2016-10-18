@@ -28,7 +28,7 @@ html, body {
   box-shadow: inset 0px 0px 20px -8px rgba(132, 114, 114, 0.45);
 }
 
-#controls button, #controls img {
+#controls button, #controls * .button {
     border-radius: 99px;
     padding: 7px;
     border: none;
@@ -73,7 +73,7 @@ webview {
   padding-top: 12px;
 }
 
-#controls .pictogram-icon.last{
+#controls .button.last{
   margin-right: 8px!important;
 }
 #controls #max-btn{
@@ -86,11 +86,11 @@ webview {
   margin: 6px;
   border-radius: 3px;
 }
-#controls #buttons img:last-child{
+#controls #buttons .button:last-child{
   border-left: none;
 }
 
-#controls #buttons img{
+#controls #buttons .button{
   padding: 6px;
   margin: 0;
   padding-right: 9px;
@@ -105,7 +105,7 @@ webview {
   border-radius: 3px;
 }
 
-#controls #buttons img#share{
+#controls #buttons .button#share{
   border-radius: 0px;
   border-right: 1px solid rgba(128, 128, 128, 0.82);
   border-left: 1px solid rgba(128, 128, 128, 0.82);
