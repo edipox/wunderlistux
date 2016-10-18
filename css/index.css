@@ -16,6 +16,7 @@ html {
 input,
 button,
 img,
+.button,
 textarea, a{
     -webkit-app-region: no-drag;
 }
@@ -64,7 +65,7 @@ html, body{
   -webkit-app-region: no-drag;
 }
 
-#controls .pictogram-icon, #controls #close-btn{
+#controls .button, #controls #close-btn{
   -webkit-app-region: no-drag;
   font-size: 21px;
   padding: 14px;
