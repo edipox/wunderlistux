@@ -2,6 +2,7 @@ var onWebviewReady = function() {
   var onLoaded = function(){
     var theme = localStorage.getItem("theme") || "elementary";
     setCustomTheme(theme);
+    checkEnableShareButton();
   }
   jq.wait = function(ms) {
     var defer = jq.Deferred();
@@ -19,3 +20,4 @@ var onWebviewReady = function() {
 
 getWebview().addEventListener('did-finish-load', onWebviewReady);
 getWebview().addEventListener("dom-ready", onWebviewReady);
+getWebview().addEventListener("did-navigate-in-page", checkEnableShareButton);

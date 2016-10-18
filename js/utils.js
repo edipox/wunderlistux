@@ -20,3 +20,28 @@ window.setCustomTheme = function(theme){
 var getWebview = function(){
   return document.getElementById('webview');
 }
+
+var checkEnableShareButton = function(e){
+  var url = (e || {}).url;
+  var notSharableLists = [
+    "#/lists/all",
+    "#/lists/week",
+    "#/lists/starred",
+    "#/lists/inbox"
+  ];
+  var path = url || jq("webview").attr("src");
+  path = path.substring(path.indexOf("#"), path.length);
+  var isSharableList = true;
+  for(var i = 0; i < notSharableLists.length; i++){
+    var listPath = notSharableLists[i];
+    console.log(isSharableList)
+    console.log(listPath)
+    console.warn(path)
+    if(listPath == path) isSharableList = false;
+  }
+  if(isSharableList){
+    document.getElementById("share").src="images/contact-new-symbolic.svg";
+  }else{
+    document.getElementById("share").src="images/contact-new-symbolic-disabled.svg";
+  }
+}
