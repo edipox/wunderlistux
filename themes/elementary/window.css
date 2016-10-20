@@ -36,14 +36,6 @@ html, body {
     margin-top: 0;
 }
 
-#controls #close-btn {
-    background: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin-left: 4px!important;
-}
-
 webview {
     height: 100%;
     width: 100%;
@@ -76,9 +68,7 @@ webview {
 #controls .button.last{
   margin-right: 8px!important;
 }
-#controls #max-btn{
-  transform: scaleX(-1);
-}
+
 #controls #buttons{
   border: 1px solid rgba(128, 128, 128, 0.82);
   position: absolute;
@@ -109,4 +99,21 @@ webview {
   border-radius: 0px;
   border-right: 1px solid rgba(128, 128, 128, 0.82);
   border-left: 1px solid rgba(128, 128, 128, 0.82);
+}
+
+#controls #max-btn{
+  transform: scaleX(-1);
+  right: 0;
+  float: right;
+  margin-right: 0!important;
+  padding-left: 12px;
+}
+
+#controls #close-btn {
+    background: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 0!important;
+    padding-left: 12px;
 }
