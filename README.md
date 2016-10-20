@@ -13,7 +13,7 @@ Screenshots taken in the most awesome indie OS: [elementary OS (Loki)](http://el
 ### Linux
 [Download the last release](https://github.com/edipox/wunderlistux/releases/latest).
 
-Add an app shortcut. Create a file in ~/.local/share/applications called wunderlistux.desktop with the following contents:
+Add an app shortcut. Create a file in `~/.local/share/applications` called wunderlistux.desktop with the following contents:
 ```
 [Desktop Entry]
 Name=Wunderlistux
@@ -27,7 +27,7 @@ Or just copy the wunderlistux.desktop file from the release you downloaded. You 
 ## Thank you!
 If you like the app please :star: the github project.
 
-If you super liked it  [buy me a coffee :coffee:](http://ko-fi.com/A553N9). 
+If you super liked it  [buy me a coffee :coffee:](http://ko-fi.com/A553N9).
 
 If you disked it you still could :star: the github project and [buy me a coffee :coffee:](http://ko-fi.com/A553N9) :)
 
