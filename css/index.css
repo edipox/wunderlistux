@@ -1,6 +1,6 @@
 html,
 header {
-    -webkit-app-region: drag;
+    /*-webkit-app-region: drag;*/
     -ms-overflow-style: scrollbar;
 }
 
@@ -18,7 +18,7 @@ button,
 img,
 .button,
 textarea, a{
-    -webkit-app-region: no-drag;
+    /*-webkit-app-region: no-drag;*/
 }
 
 header {
@@ -86,4 +86,9 @@ html, body{
   display: flex;
   padding-top: 0;
   padding-bottom: 2px;
+}
+
+.disabled svg *{
+  fill: #aaa!important;
+  color: #aaa!important;
 }
