@@ -92,3 +92,137 @@ html, body{
   fill: #aaa!important;
   color: #aaa!important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html, body , #controls-container{
+    background: rgb(177, 177, 177);
+}
+
+
+#controls {
+  z-index: 99;
+  position: absolute;
+  padding: 0 3px 3px;
+  top: 1px;
+  height: 41px;
+  position: relative;
+  width: 100%;
+}
+
+#controls button, #controls * .button {
+    border-radius: 99px;
+    padding: 7px;
+    border: none;
+    margin: 3px;
+    margin-top: 0;
+}
+
+webview {
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+    top: 46px;
+}
+
+.stars, #min-btn {
+    display: none;
+}
+
+#share, #sort, #more, #max-btn{
+  float: right;
+}
+
+#conv, #bell{
+  float: left;
+}
+
+#controls #bell{
+  margin: 0!important;
+  margin-left: 46px!important;
+  height: 22px!important;
+  width: 23px!important;
+  padding-top: 12px;
+}
+
+#controls .button.last{
+  margin-right: 8px!important;
+}
+
+#controls #buttons{
+  position: absolute;
+  right: 60px;
+  margin: 6px;
+}
+#controls #buttons .button:last-child{
+  border-left: none;
+}
+
+
+#controls #buttons .button{
+  padding: 6px;
+  margin: 0;
+  padding-right: 9px;
+  padding-left: 9px;
+  border-radius: 0;
+  box-shadow: none;
+  padding-bottom: 8px;
+  padding-top: 4px;
+}
+
+
+#controls #max-btn{
+  right: 0;
+  float: right;
+  margin-right: 0!important;
+  padding-left: 12px;
+}
+
+#controls #close-btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 0!important;
+    padding-left: 12px;
+}
+
+#controls #close-btn, #controls #max-btn{
+  background-repeat: no-repeat;
+  background-size: 17px;
+  background-position: 10px;
+}
+
+#controls #conv{
+  padding-top: 12px;
+}
+#controls #bell{
+  padding-top: 11px;
+}
+
+svg *{
+  fill: rgb(177, 177, 177)!important;
+  color: rgb(177, 177, 177)!important;
+}
