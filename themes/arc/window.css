@@ -1,14 +1,14 @@
 html, body , #controls-container{
-    background: #d9dde0;
+    background: #d4d5db;
 }
 
 #controls-container, #controls{
-  border-color:  #d9dde0 !important;
+  border-color:  #d4d5db !important;
   border-radius: 3px;
 }
 
 #controls #buttons .button, #controls{
- background: #F5F6F7;
+ background: #e7e8eb;
 }
 
 #controls {
@@ -87,7 +87,7 @@ webview {
   border-radius: 3px;
   padding-bottom: 8px;
   padding-top: 4px;
-  border: 1px solid #F5F6F7;
+  border: 1px solid #e7e8eb;
 }
 
 
@@ -96,10 +96,10 @@ webview {
   float: right;
   margin-right: 0!important;
   padding-left: 12px;
-  background-image: url(images/arc-dark/titlebutton-maximize-dark@2.png);
+  background-image: url(images/arc/titlebutton-maximize@2.png);
 }
 #controls #max-btn:hover{
-  background-image: url(images/arc-dark/titlebutton-maximize-hover-dark@2.png);
+  background-image: url(images/arc/titlebutton-maximize-hover@2.png);
 }
 
 #controls #close-btn {
@@ -120,12 +120,14 @@ webview {
   background-position: 10px;
 }
 #controls #buttons .button:hover{
-  background-color: #505666;
-  border: 1px solid #fbfbf;
+  /*background-color: #505666;*/
+  /*border: 1px solid #fbfbf;*/
+  border: 1px solid #dcdfe3;
+  background-color: #f5f6f7;
 }
 #controls #buttons .button:hover svg *{
-    color: #5c616c;
-    fill: #5c616c;
+    color: #7d8189;
+    fill: #7d8189;
 }
 
 
@@ -137,6 +139,11 @@ webview {
 }
 
 svg *{
-  fill: #5c616c!important;
-  color: #5c616c!important;
+  fill: #939aa9!important;
+  color: #939aa9!important;
+}
+
+.disabled svg *{
+  fill: #c3c7d4!important;
+  color: #c3c7d4!important;
 }
