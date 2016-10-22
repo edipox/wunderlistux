@@ -1,30 +1,23 @@
-html, body {
-    background: rgba(140, 140, 140, 0.5);
+html, body , #controls-container{
+    background: #dcdfe3;
 }
 
 #controls {
   z-index: 99;
-  /* width: 98.85%; */
   position: absolute;
   -webkit-app-region: drag;
   -webkit-user-select: none;
   padding: 0 3px 3px;
   text-shadow: 0 1px rgba(0, 0, 0, 0.4);
   top: 1px;
-  /* height: 42px; */
   border-radius: 3px;
-  /* border-top: 1px solid #eaeaea; */
-  background: rgba(222, 222, 222, 1);
-  /* border: 1px solid #cccccc; */
+  background: linear-gradient(#f8f8f8, #dcdfe3);
   border-width: 0 0 1px 0;
-  /*background: linear-gradient(to bottom, rgba(222, 222, 222, 1) 0%, rgba(184, 184, 184, 1) 100%);*/
   border: 1px solid #efefef;
   border-bottom: 1px #d2d2d2 ridge;
-  /* box-shadow: none; */
-  height: 41px;
+  height: 41px!important;
   position: relative;
   width: 100%;
-  background: linear-gradient(to bottom, rgba(222, 222, 222, 1) 0%, rgb(177, 177, 177) 100%);
   box-shadow: inset 0px 0px 20px -8px rgba(132, 114, 114, 0.45);
 }
 
@@ -42,7 +35,7 @@ webview {
     -webkit-app-region: no-drag;
     z-index: 100;
     position: absolute;
-    top: 48px;
+    top: 48px!important;
 }
 
 .stars, #min-btn {
@@ -80,6 +73,7 @@ webview {
   border-left: none;
 }
 
+
 #controls #buttons .button{
   padding: 6px;
   margin: 0;
@@ -87,12 +81,18 @@ webview {
   padding-left: 9px;
   border-radius: 0;
   /*box-shadow: inset 0px 0px 20px -8px rgba(132, 114, 114, 0.45);*/
-  background: linear-gradient(to bottom, rgba(222, 222, 222, 1) 0%, rgb(177, 177, 177) 100%);
+  background: linear-gradient(#f8f8f8, #dcdfe3);
   box-shadow: none;
   border-top: 1px solid #efefef;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
   border-radius: 3px;
+  padding-bottom: 8px;
+  padding-top: 4px;
+}
+
+#controls #buttons .button:hover{
+  background: linear-gradient(#fff, #e2e5e9);
 }
 
 #controls #buttons .button#share{
@@ -107,13 +107,38 @@ webview {
   float: right;
   margin-right: 0!important;
   padding-left: 12px;
+  background-image: url(images/elementary/window-maximize-symbolic-rtl.svg);
 }
 
 #controls #close-btn {
     background: none;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 0!important;
     margin-left: 0!important;
     padding-left: 12px;
+    background-image: url(images/elementary/close-symbolic.svg);
+}
+#controls #close-btn, #controls #max-btn{
+  background-repeat: no-repeat;
+  background-size: 17px;
+  background-position: 15px;
+  box-shadow: 10px 0px 1px -10px rgba(0,0,0,1);
+}
+
+
+#controls #conv{
+  padding-top: 12px;
+}
+#controls #bell{
+  padding-top: 11px;
+}
+
+html, body , #controls-container{
+  background: rgb(177, 177, 177);
+}
+
+svg *{
+  fill:  #585858!important;
+  color:  #585858!important;
 }
