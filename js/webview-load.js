@@ -35,7 +35,7 @@ window.setCustomTheme = function(_, theme){
 window.onload = function() {
     loadJQuery()
     var onReady = function() {
-      setCustomTheme(null, localStorage.getItem("custom_electron_theme") || "elementary");
+      setCustomTheme(null, localStorage.getItem("custom_electron_theme") || "arc-dark");
     };
 }
 

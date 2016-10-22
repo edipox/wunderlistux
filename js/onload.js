@@ -1,6 +1,6 @@
 var onWebviewReady = function() {
   var onLoaded = function(){
-    var theme = localStorage.getItem("theme") || "elementary";
+    var theme = localStorage.getItem("theme") || "arc-dark";
     setCustomTheme(theme);
     checkEnableShareButton();
   }
