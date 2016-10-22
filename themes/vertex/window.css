@@ -80,7 +80,6 @@ webview {
   border-left: none;
 }
 
-
 #controls #buttons .button{
   padding: 6px;
   margin: 0;
@@ -94,8 +93,6 @@ webview {
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
   border-radius: 3px;
-  padding-bottom: 8px;
-  padding-top: 4px;
 }
 
 #controls #buttons .button#share{
@@ -110,7 +107,6 @@ webview {
   float: right;
   margin-right: 0!important;
   padding-left: 12px;
-  background-image: url(images/elementary/window-maximize-symbolic-rtl.svg);
 }
 
 #controls #close-btn {
@@ -120,18 +116,4 @@ webview {
     top: 0;
     margin-left: 0!important;
     padding-left: 12px;
-    background-image: url(images/elementary/close-symbolic.svg);
-}
-#controls #close-btn, #controls #max-btn{
-  background-repeat: no-repeat;
-  background-size: 17px;
-  background-position: 10px;
-}
-
-
-#controls #conv{
-  padding-top: 12px;
-}
-#controls #bell{
-  padding-top: 11px;
 }

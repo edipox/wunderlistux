@@ -40,8 +40,8 @@ var checkEnableShareButton = function(e){
     if(listPath == path) isSharableList = false;
   }
   if(isSharableList){
-    document.getElementById("share").src="images/contact-new-symbolic.svg";
+    jq("#share").removeClass("disabled");
   }else{
-    document.getElementById("share").src="images/contact-new-symbolic-disabled.svg";
+    jq("#share").addClass("disabled");
   }
 }
