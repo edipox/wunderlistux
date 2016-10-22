@@ -1,27 +1,21 @@
-html, body {
+html, body , #controls-container{
     background: rgba(140, 140, 140, 0.5);
 }
 
 #controls {
   z-index: 99;
-  /* width: 98.85%; */
   position: absolute;
   -webkit-app-region: drag;
   -webkit-user-select: none;
   padding: 0 3px 3px;
   text-shadow: 0 1px rgba(0, 0, 0, 0.4);
   top: 1px;
-  /* height: 42px; */
   border-radius: 3px;
-  /* border-top: 1px solid #eaeaea; */
   background: rgba(222, 222, 222, 1);
-  /* border: 1px solid #cccccc; */
   border-width: 0 0 1px 0;
-  /*background: linear-gradient(to bottom, rgba(222, 222, 222, 1) 0%, rgba(184, 184, 184, 1) 100%);*/
   border: 1px solid #efefef;
   border-bottom: 1px #d2d2d2 ridge;
-  /* box-shadow: none; */
-  height: 41px;
+  height: 41px!important;
   position: relative;
   width: 100%;
   background: linear-gradient(to bottom, rgba(222, 222, 222, 1) 0%, rgb(177, 177, 177) 100%);
@@ -42,7 +36,7 @@ webview {
     -webkit-app-region: no-drag;
     z-index: 100;
     position: absolute;
-    top: 48px;
+    top: 48px!important;
 }
 
 .stars, #min-btn {
@@ -117,7 +111,7 @@ webview {
     background: none;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 0!important;
     margin-left: 0!important;
     padding-left: 12px;
     background-image: url(images/elementary/close-symbolic.svg);
@@ -134,4 +128,13 @@ webview {
 }
 #controls #bell{
   padding-top: 11px;
+}
+
+html, body , #controls-container{
+  background: rgb(177, 177, 177);
+}
+
+svg *{
+  fill:  #585858!important;
+  color:  #585858!important;
 }
