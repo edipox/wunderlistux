@@ -9,12 +9,17 @@ window.setCustomTheme = function(theme){
       jq('#' + id).remove();
       jq('<' + type + ' id="' + id + '">' + content + '</' + type + '>').appendTo(appender);
   }
-  fs.readFile("./themes/" + theme + "/window.css", 'utf8', function(err, content) {
+  fs.readFile(process.resourcesPath+"/app/themes/"+theme+"/window.css", 'utf8', function (err, content) {
+    if(err){
+      fs.readFile("./themes/"+theme+"/window.css", 'utf8', function (err, content) {
+        createOrUpdate(THEME_CONTAINER_ID, content, "style", "body")
+      });
+    }else{
       createOrUpdate(THEME_CONTAINER_ID, content, "style", "body")
+    }
   });
-  var webview = getWebview();
   localStorage.setItem("theme", theme);
-  webview.send('change-theme', theme);
+  getWebview().send('change-theme', theme);
 }
 
 var getWebview = function(){
