@@ -38,7 +38,7 @@ webview {
     height: 100%;
     width: 100%;
     -webkit-app-region: no-drag;
-    z-index: 100;
+    z-index: 80;
     position: absolute;
     top: 46px;
 }
@@ -146,4 +146,9 @@ svg *{
 .disabled svg *{
   fill: #c3c7d4!important;
   color: #c3c7d4!important;
+}
+
+
+#controls #settings-btn{
+    right: 46px;
 }
