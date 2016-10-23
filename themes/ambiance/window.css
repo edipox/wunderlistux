@@ -33,7 +33,7 @@ webview {
     height: 100%;
     width: 100%;
     -webkit-app-region: no-drag;
-    z-index: 100;
+    z-index: 80;
     position: absolute;
     top: 43px!important;
 }
@@ -67,7 +67,7 @@ webview {
   border-top: /1px solid #636159;
   border: 1px solid #363632;
   position: absolute;
-  right: 60px;
+  right: 28px;
   margin: 6px;
   border-radius: 3px;
   margin-top: 4px;
@@ -162,4 +162,13 @@ svg *{
 .disabled svg *{
   fill:  #7a7874!important;
   color:  #7a7874!important;
+}
+
+#controls #settings-btn{
+  right: 8px;
+  top: 12px;
+}
+
+#controls #settings-btn:hover{
+  background: #fff;
 }

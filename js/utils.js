@@ -34,9 +34,6 @@ var checkEnableShareButton = function(e){
   var isSharableList = true;
   for(var i = 0; i < notSharableLists.length; i++){
     var listPath = notSharableLists[i];
-    console.log(isSharableList)
-    console.log(listPath)
-    console.warn(path)
     if(listPath == path) isSharableList = false;
   }
   if(isSharableList){
