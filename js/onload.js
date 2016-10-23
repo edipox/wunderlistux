@@ -10,11 +10,11 @@ var onWebviewReady = function() {
     return defer;
   };
   jq.wait(100).then(onLoaded);
-  jq.wait(300).then(onLoaded);
+  // jq.wait(300).then(onLoaded);
   jq.wait(1000).then(onLoaded);
-  jq.wait(3000).then(onLoaded);
+  // jq.wait(3000).then(onLoaded);
   jq.wait(6000).then(onLoaded);
-  jq.wait(10000).then(onLoaded);
+  // jq.wait(10000).then(onLoaded);
   jq.wait(15000).then(onLoaded);
 };
 
