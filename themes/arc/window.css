@@ -1,5 +1,14 @@
 html, body , #controls-container{
-    background: rgba(140, 140, 140, 0.5);
+    background: #d4d5db;
+}
+
+#controls-container, #controls{
+  border-color:  #d4d5db !important;
+  border-radius: 3px;
+}
+
+#controls #buttons .button, #controls{
+ background: #e7e8eb;
 }
 
 #controls {
@@ -10,16 +19,11 @@ html, body , #controls-container{
   padding: 0 3px 3px;
   text-shadow: 0 1px rgba(0, 0, 0, 0.4);
   top: 1px;
-  border-radius: 3px;
-  background: rgba(222, 222, 222, 1);
-  border-width: 0 0 1px 0;
-  border: 1px solid #efefef;
-  border-bottom: 1px #d2d2d2 ridge;
-  height: 41px!important;
+
+  height: 41px;
   position: relative;
   width: 100%;
-  background: linear-gradient(to bottom, rgba(222, 222, 222, 1) 0%, rgb(177, 177, 177) 100%);
-  box-shadow: inset 0px 0px 20px -8px rgba(132, 114, 114, 0.45);
+  border:none;
 }
 
 #controls button, #controls * .button {
@@ -36,7 +40,7 @@ webview {
     -webkit-app-region: no-drag;
     z-index: 80;
     position: absolute;
-    top: 48px!important;
+    top: 46px;
 }
 
 .stars, #min-btn {
@@ -64,11 +68,9 @@ webview {
 }
 
 #controls #buttons{
-  border: 1px solid rgba(128, 128, 128, 0.82);
   position: absolute;
   right: 60px;
   margin: 6px;
-  border-radius: 3px;
 }
 #controls #buttons .button:last-child{
   border-left: none;
@@ -81,45 +83,51 @@ webview {
   padding-right: 9px;
   padding-left: 9px;
   border-radius: 0;
-  /*box-shadow: inset 0px 0px 20px -8px rgba(132, 114, 114, 0.45);*/
-  background: linear-gradient(to bottom, rgba(222, 222, 222, 1) 0%, rgb(177, 177, 177) 100%);
   box-shadow: none;
-  border-top: 1px solid #efefef;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
   border-radius: 3px;
   padding-bottom: 8px;
   padding-top: 4px;
+  border: 1px solid #e7e8eb;
 }
 
-#controls #buttons .button#share{
-  border-radius: 0px;
-  border-right: 1px solid rgba(128, 128, 128, 0.82);
-  border-left: 1px solid rgba(128, 128, 128, 0.82);
-}
 
 #controls #max-btn{
-  transform: scaleX(-1);
   right: 0;
   float: right;
   margin-right: 0!important;
   padding-left: 12px;
-  background-image: url(images/elementary/window-maximize-symbolic-rtl.svg);
+  background-image: url(images/arc/titlebutton-maximize@2.png);
+}
+#controls #max-btn:hover{
+  background-image: url(images/arc/titlebutton-maximize-hover@2.png);
 }
 
 #controls #close-btn {
     background: none;
     position: absolute;
     left: 0;
-    top: 0!important;
+    top: 0;
     margin-left: 0!important;
     padding-left: 12px;
-    background-image: url(images/elementary/close-symbolic.svg);
+    background-image: url(images/arc-dark/titlebutton-close-dark@2.png);
+}
+#controls #close-btn:hover{
+  background-image: url(images/arc-dark/titlebutton-close-hover@2.png);
 }
 #controls #close-btn, #controls #max-btn{
   background-repeat: no-repeat;
   background-size: 17px;
   background-position: 10px;
+}
+#controls #buttons .button:hover{
+  /*background-color: #505666;*/
+  /*border: 1px solid #fbfbf;*/
+  border: 1px solid #dcdfe3;
+  background-color: #f5f6f7;
+}
+#controls #buttons .button:hover svg *{
+    color: #7d8189;
+    fill: #7d8189;
 }
 
 
@@ -130,19 +138,17 @@ webview {
   padding-top: 11px;
 }
 
-html, body , #controls-container{
-  background: rgb(177, 177, 177);
+svg *{
+  fill: #939aa9!important;
+  color: #939aa9!important;
 }
 
-svg *{
-  fill:  #585858!important;
-  color:  #585858!important;
+.disabled svg *{
+  fill: #c3c7d4!important;
+  color: #c3c7d4!important;
 }
+
 
 #controls #settings-btn{
-  right: 38px;
-  top: 15px;
-}
-#controls #settings-btn:hover{
-  background: #585858;
+    right: 46px;
 }
