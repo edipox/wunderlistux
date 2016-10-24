@@ -5,8 +5,24 @@ An electron wrapper for wunderlist made with :heart: for Linux (specially for [e
 ## Screenshots
 Screenshots taken in the most awesome indie OS: [elementary OS (Loki)](http://elementary.io)
 
-
+### Elementary 
 ![Screenshots](/images/wunderlistux.png)
+
+### Ambiance
+![Screenshots](/images/wunderlistux-ambiance.png)
+
+### Arc Dark
+![Screenshots](/images/wunderlistux-arc-dark.png)
+
+### Adwaita
+![Screenshots](/images/wunderlistux-adwaita.png)
+
+And others
+
+## Themes
+There is a top secret theme selector:
+
+![Screenshots](/images/theme-selector.png)
 
 
 ## Install
