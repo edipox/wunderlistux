@@ -5,7 +5,7 @@ An electron wrapper for wunderlist made with :heart: for Linux (specially for [e
 ## Screenshots
 Screenshots taken in the most awesome indie OS: [elementary OS (Loki)](http://elementary.io)
 
-### Elementary 
+### Elementary
 ![Screenshots](/images/wunderlistux.png)
 
 ### Ambiance
@@ -27,6 +27,11 @@ There is a top secret theme selector:
 
 ## Install
 ### Linux
+
+#### Automatically
+Run ```bin/install.sh``` as root. Wunderlistux will be automatically installed on your computer.
+
+#### Manually
 [Download the last release](https://github.com/edipox/wunderlistux/releases/latest).
 
 Add an app shortcut. Create a file in `~/.local/share/applications` called wunderlistux.desktop with the following contents:
