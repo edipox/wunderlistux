@@ -50,7 +50,7 @@ If you like the app please :star: the github project.
 
 If you super liked it  [buy me a coffee :coffee:](http://ko-fi.com/A553N9).
 
-If you disked it you still could :star: the github project and [buy me a coffee :coffee:](http://ko-fi.com/A553N9) :)
+If you disliked it you still could :star: the github project and [buy me a coffee :coffee:](http://ko-fi.com/A553N9) :)
 
 ## TODO
 * Color picker to customize headerbar.
