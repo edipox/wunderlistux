@@ -9,12 +9,17 @@ window.setCustomTheme = function(theme){
       jq('#' + id).remove();
       jq('<' + type + ' id="' + id + '">' + content + '</' + type + '>').appendTo(appender);
   }
-  fs.readFile("./themes/" + theme + "/window.css", 'utf8', function(err, content) {
+  fs.readFile(process.resourcesPath+"/app/themes/"+theme+"/window.css", 'utf8', function (err, content) {
+    if(err){
+      fs.readFile("./themes/"+theme+"/window.css", 'utf8', function (err, content) {
+        createOrUpdate(THEME_CONTAINER_ID, content, "style", "body")
+      });
+    }else{
       createOrUpdate(THEME_CONTAINER_ID, content, "style", "body")
+    }
   });
-  var webview = getWebview();
   localStorage.setItem("theme", theme);
-  webview.send('change-theme', theme);
+  getWebview().send('change-theme', theme);
 }
 
 var getWebview = function(){
@@ -34,14 +39,11 @@ var checkEnableShareButton = function(e){
   var isSharableList = true;
   for(var i = 0; i < notSharableLists.length; i++){
     var listPath = notSharableLists[i];
-    console.log(isSharableList)
-    console.log(listPath)
-    console.warn(path)
     if(listPath == path) isSharableList = false;
   }
   if(isSharableList){
-    document.getElementById("share").src="images/contact-new-symbolic.svg";
+    jq("#share").removeClass("disabled");
   }else{
-    document.getElementById("share").src="images/contact-new-symbolic-disabled.svg";
+    jq("#share").addClass("disabled");
   }
 }
