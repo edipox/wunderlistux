@@ -1,0 +1,150 @@
+html, body , #controls-container{
+    background: #22242d;
+}
+
+#controls-container, #controls{
+  border-color:  #22242d !important;
+  border-radius: 3px;
+}
+
+#controls #buttons .button, #controls{
+ background: #383C4A;
+}
+
+#controls {
+  z-index: 99;
+  position: absolute;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  padding: 0 3px 3px;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+  top: 1px;
+
+  height: 41px;
+  position: relative;
+  width: 100%;
+  border:none;
+}
+
+#controls button, #controls * .button {
+    border-radius: 99px;
+    padding: 7px;
+    border: none;
+    margin: 3px;
+    margin-top: 0;
+}
+
+webview {
+    height: 100%;
+    width: 100%;
+    -webkit-app-region: no-drag;
+    z-index: 80;
+    position: absolute;
+    top: 46px;
+}
+
+.stars, #min-btn {
+    display: none;
+}
+
+#share, #sort, #more, #max-btn{
+  float: right;
+}
+
+#conv, #bell{
+  float: left;
+}
+
+#controls #bell{
+  margin: 0!important;
+  margin-left: 46px!important;
+  height: 22px!important;
+  width: 23px!important;
+  padding-top: 12px;
+}
+
+#controls .button.last{
+  margin-right: 8px!important;
+}
+
+#controls #buttons{
+  position: absolute;
+  right: 60px;
+  margin: 6px;
+}
+#controls #buttons .button:last-child{
+  border-left: none;
+}
+
+
+#controls #buttons .button{
+  padding: 6px;
+  margin: 0;
+  padding-right: 9px;
+  padding-left: 9px;
+  border-radius: 0;
+  box-shadow: none;
+  border-radius: 3px;
+  padding-bottom: 8px;
+  padding-top: 4px;
+  border: 1px solid #383C4A;
+}
+
+
+#controls #max-btn{
+  right: 0;
+  float: right;
+  margin-right: 0!important;
+  padding-left: 12px;
+  background-image: url(images/arc-dark/titlebutton-maximize-dark@2.png);
+}
+#controls #max-btn:hover{
+  background-image: url(images/arc-dark/titlebutton-maximize-hover-dark@2.png);
+}
+
+#controls #close-btn {
+    background: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 0!important;
+    padding-left: 12px;
+    background-image: url(images/arc-dark/titlebutton-close-dark@2.png);
+}
+#controls #close-btn:hover{
+  background-image: url(images/arc-dark/titlebutton-close-hover@2.png);
+}
+#controls #close-btn, #controls #max-btn{
+  background-repeat: no-repeat;
+  background-size: 17px;
+  background-position: 10px;
+}
+#controls #buttons .button:hover{
+  background-color: #505666;
+  border: 1px solid #2b2e39;
+}
+#controls #buttons .button:hover svg *{
+    color: #D3DAE3;
+    fill: #D3DAE3;
+}
+
+
+#controls #conv{
+  padding-top: 12px;
+}
+#controls #bell{
+  padding-top: 11px;
+}
+
+svg *{
+  fill: #D3DAE3!important;
+  color: #D3DAE3!important;
+}
+
+#controls #settings-btn{
+    right: 46px;
+}
+
+#controls #settings-btn:hover{
+  background:#fff;
+}
