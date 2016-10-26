@@ -5,12 +5,33 @@ An electron wrapper for wunderlist made with :heart: for Linux (specially for [e
 ## Screenshots
 Screenshots taken in the most awesome indie OS: [elementary OS (Loki)](http://elementary.io)
 
-
+### Elementary
 ![Screenshots](/images/wunderlistux.png)
+
+### Ambiance
+![Screenshots](/images/wunderlistux-ambiance.png)
+
+### Arc Dark
+![Screenshots](/images/wunderlistux-arc-dark.png)
+
+### Adwaita
+![Screenshots](/images/wunderlistux-adwaita.png)
+
+And others
+
+## Themes
+There is a top secret theme selector:
+
+![Screenshots](/images/theme-selector.png)
 
 
 ## Install
 ### Linux
+
+#### Automatically
+Run ```bin/install.sh``` as root. Wunderlistux will be automatically installed on your computer.
+
+#### Manually
 [Download the last release](https://github.com/edipox/wunderlistux/releases/latest).
 
 Add an app shortcut. Create a file in `~/.local/share/applications` called wunderlistux.desktop with the following contents:
@@ -29,7 +50,7 @@ If you like the app please :star: the github project.
 
 If you super liked it  [buy me a coffee :coffee:](http://ko-fi.com/A553N9).
 
-If you disked it you still could :star: the github project and [buy me a coffee :coffee:](http://ko-fi.com/A553N9) :)
+If you disliked it you still could :star: the github project and [buy me a coffee :coffee:](http://ko-fi.com/A553N9) :)
 
 ## TODO
 * Color picker to customize headerbar.
