@@ -11,7 +11,7 @@ fi
 if [ $KERNEL = 'Linux' ] && [ $ARCH = 'x86_64' ]; then
   URL='https://github.com/edipox/wunderlistux/archive/0.0.5-linux-x64.tar.gz'
 else
-  URL='https://github.com/edipox/wunderlistux/archive/0.0.4-linux-ia32.tar.gz'
+  URL='https://github.com/edipox/wunderlistux/archive/0.0.5-linux-ia32.tar.gz'
 fi
 
 # download builded application and extract in /opt directory
