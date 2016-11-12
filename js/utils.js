@@ -1,5 +1,4 @@
-const {shell} = require('electron');
-const remote = require('electron').remote;
+const {shell, remote} = require('electron');
 window.jq = require('./js/jquery-3.1.0.min.js');
 
 window.setCustomTheme = function(theme){
