@@ -21,3 +21,4 @@ var onWebviewReady = function() {
 getWebview().addEventListener('did-finish-load', onWebviewReady);
 getWebview().addEventListener("dom-ready", onWebviewReady);
 getWebview().addEventListener("did-navigate-in-page", checkEnableShareButton);
+getWebview().addEventListener("new-window", handleExternalLinkClick);
