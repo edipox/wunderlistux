@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# Test for a terminal!
+fd=0   # stdin
+#  As we recall, the -t test option checks whether the stdin, [ -t 0 ],
+#+ or stdout, [ -t 1 ], in a given script is running in a terminal.
+if [ -t "$fd" ]
+then
+  echo 'Starting install of wunderlistux...' 2>&1
+else
+  echo 'You need to run the installer in a terminal!' 2>&1
+  zenity --info --text="Please open a terminal and run the install script with this command:\n sudo ./install.sh"
+  exit 1
+fi
+
 ARCH=`uname -m`
 KERNEL=`uname -s`
 
