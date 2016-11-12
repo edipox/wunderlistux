@@ -1,3 +1,4 @@
+const {shell} = require('electron');
 const remote = require('electron').remote;
 window.jq = require('./js/jquery-3.1.0.min.js');
 
@@ -45,5 +46,12 @@ var checkEnableShareButton = function(e){
     jq("#share").removeClass("disabled");
   }else{
     jq("#share").addClass("disabled");
+  }
+}
+
+var handleExternalLinkClick = function(e){
+  const protocol = require('url').parse(e.url).protocol;
+  if(protocol === 'http:' || protocol === 'https:'){
+    shell.openExternal(e.url);
   }
 }
