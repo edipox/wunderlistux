@@ -12,7 +12,13 @@ window.setCustomTheme = function(theme){
   fs.readFile(process.resourcesPath+"/app/themes/"+theme+"/window.css", 'utf8', function (err, content) {
     if(err){
       fs.readFile("./themes/"+theme+"/window.css", 'utf8', function (err, content) {
-        createOrUpdate(THEME_CONTAINER_ID, content, "style", "body")
+        if(err){
+          fs.readFile(process.resourcesPath+"/app.asar/themes/"+theme+"/window.css", 'utf8', function (err, content) {
+              createOrUpdate(THEME_CONTAINER_ID, content, "style", "body")
+          });
+        }else{
+          createOrUpdate(THEME_CONTAINER_ID, content, "style", "body")
+        }
       });
     }else{
       createOrUpdate(THEME_CONTAINER_ID, content, "style", "body")

@@ -1,12 +1,13 @@
 const {ipcRenderer} = require('electron')
 
 var loadJQuery = function(){
+  var file = "/jquery-3.1.0.min.js"
   if(window.$ === undefined)
     try {
       window.$ = window.jQuery = require(process.resourcesPath+
-        "/jquery-3.1.0.min.js");
+        file);
     } catch(err) {
-      window.$ = window.jQuery = require("./jquery-3.1.0.min.js");
+      window.$ = window.jQuery = require("." + file);
     }
 }
 
@@ -22,8 +23,14 @@ window.setCustomTheme = function(_, theme){
   }
   fs.readFile(process.resourcesPath+"/app/themes/"+theme+"/webview.css", 'utf8', function (err, content) {
     if(err){
-      fs.readFile("./themes/"+theme+"/webview.css", 'utf8', function (err, content) {
-        createOrUpdate(THEME_CONTAINER_ID, content, "style", "body")
+      fs.readFile("./themes/"+theme+"/webview.css", 'utf8', function (errSecond, content) {
+        if(errSecond){
+          fs.readFile(process.resourcesPath+"/app.asar/themes/"+theme+"/webview.css", 'utf8', function (errThird, content) {
+              createOrUpdate(THEME_CONTAINER_ID, content, "style", "body")
+          });
+        }else{
+          createOrUpdate(THEME_CONTAINER_ID, content, "style", "body")
+        }
       });
     }else{
       createOrUpdate(THEME_CONTAINER_ID, content, "style", "body")
