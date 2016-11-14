@@ -1,7 +1,6 @@
 # Wunderlistux
 An electron wrapper for wunderlist made with :heart: for Linux (specially for [elementary OS](http://elementary.io))
 
-
 ## Screenshots
 Screenshots taken in the most awesome indie OS: [elementary OS (Loki)](http://elementary.io)
 
@@ -28,22 +27,12 @@ There is a top secret theme selector:
 ## Install
 ### Linux
 
-#### Automatically
-Run ```bin/install.sh``` as root. Wunderlistux will be automatically installed on your computer.
+#### Download the app
+[Download the last release](https://github.com/edipox/wunderlistux/releases/latest). It is an [AppImage](http://appimage.org/), which allows you to try the app without installing it. Just check it out!
 
-#### Manually
-[Download the last release](https://github.com/edipox/wunderlistux/releases/latest).
-
-Add an app shortcut. Create a file in `~/.local/share/applications` called wunderlistux.desktop with the following contents:
-```
-[Desktop Entry]
-Name=Wunderlistux
-Exec=/path/to/Wunderlistux-linux-x64/Wunderlistux
-Terminal=false
-Type=Application
-Icon=/path/to/Wunderlistux-linux-x64/resources/app/images/wunderlist.png
-```
-Or just copy the wunderlistux.desktop file from the release you downloaded. You have to edit the file anyway to fix the paths.
+#### Install script
+[Download the installer](https://raw.githubusercontent.com/edipox/wunderlistux/master/bin/install.sh)
+And run it ```sudo install.sh``` as root. Wunderlistux will be automatically installed on your computer.
 
 ## Thank you!
 If you like the app please :star: the github project.
@@ -52,11 +41,40 @@ If you super liked it  [buy me a coffee :coffee:](http://ko-fi.com/A553N9).
 
 If you disliked it you still could :star: the github project and [buy me a coffee :coffee:](http://ko-fi.com/A553N9) :)
 
+
+## Building
+
+### Install npm
+```
+sudo apt-get install nodejs npm -y
+```
+
+### Fix node missing from PATH issue
+```
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+```
+
+### Install global dependencies
+```
+sudo npm install electron electron-builder electron-packager electron-prebuilt asar -g
+```
+
+### Install electron-builder
+Better check electron-builder's doc for updated install instructions: https://github.com/electron-userland/electron-builder/wiki/Multi-Platform-Build
+
+### Install all the dependencies
+```
+npm install
+```
+
+### Build:
+In the project root: ```build```
+
 ## TODO
-* Color picker to customize headerbar.
 * Add support for other OSs.
 
 ## Credits
 * Those amazing icons where stolen from [elementary OS](http://elementary.io). Here is the [github project](https://github.com/elementary/icons). I think those were made by [Daniel Foré](https://github.com/danrabbit) and [Sam Hewitt](https://github.com/snwh).
 * Inspired by [Caprine](https://github.com/sindresorhus/caprine) and [Skype-Electron](https://github.com/GyozaGuy/Skype-Electron)
 * App icon from https://www.iconfinder.com/megavyto98
+* [AppImage app icon](https://commons.wikimedia.org/wiki/File:Wunderlist.png)
