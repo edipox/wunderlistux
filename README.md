@@ -28,7 +28,7 @@ There is a top secret theme selector:
 ### Linux
 
 #### Download the app
-[Download the last release](https://github.com/edipox/wunderlistux/releases/latest). It is an [AppImage](http://appimage.org/), which allows you to try the app without installing it. Just check it out!
+[Download the last AppImage](https://github.com/edipox/wunderlistux/releases/latest). An [AppImage](http://appimage.org/) allows you to try the app without installing it. It also allows you to install the app (creating the .desktop file, etc). Just check it out!
 
 #### Install script
 [Download the installer](https://raw.githubusercontent.com/edipox/wunderlistux/master/bin/install.sh)
@@ -67,7 +67,10 @@ Better check electron-builder's doc for updated install instructions: https://gi
 npm install
 ```
 
-### Build:
+### Build a release
+In the project root: ```./bin/build-linux-x64.sh``` or ```./bin/build-linux-ia32.sh```
+
+### Build the AppImage
 In the project root: ```build```
 
 ## TODO
