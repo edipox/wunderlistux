@@ -28,7 +28,7 @@ There is a top secret theme selector:
 ### Linux
 
 #### Download the app
-[Download the last AppImage](https://github.com/edipox/wunderlistux/releases/latest). An [AppImage](http://appimage.org/) allows you to try the app without installing it. It also allows you to install the app (creating the .desktop file, etc). Just check it out!
+[Download the last AppImage](https://github.com/edipox/wunderlistux/releases). An [AppImage](http://appimage.org/) allows you to try the app without installing it. It also allows you to install the app (creating the .desktop file, etc). Just check it out!
 
 #### Install script
 [Download the installer](https://raw.githubusercontent.com/edipox/wunderlistux/master/bin/install.sh)
