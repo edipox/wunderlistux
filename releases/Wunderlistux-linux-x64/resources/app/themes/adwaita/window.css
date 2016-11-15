@@ -1,0 +1,153 @@
+html, body , #controls-container{
+    background: #dcdfe3;
+}
+
+#controls {
+  z-index: 99;
+  position: absolute;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  padding: 0 3px 3px;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+  top: 1px;
+  border-radius: 3px;
+  background: linear-gradient(#f8f8f8, #dcdfe3);
+  border-width: 0 0 1px 0;
+  border: 1px solid #efefef;
+  border-bottom: 1px #d2d2d2 ridge;
+  height: 41px!important;
+  position: relative;
+  width: 100%;
+  box-shadow: inset 0px 0px 20px -8px rgba(132, 114, 114, 0.45);
+}
+
+#controls button, #controls * .button {
+    border-radius: 99px;
+    padding: 7px;
+    border: none;
+    margin: 3px;
+    margin-top: 0;
+}
+
+webview {
+    height: 100%;
+    width: 100%;
+    -webkit-app-region: no-drag;
+    z-index: 80;
+    position: absolute;
+    top: 48px!important;
+}
+
+.stars, #min-btn {
+    display: none;
+}
+
+#share, #sort, #more, #max-btn{
+  float: right;
+}
+
+#conv, #bell{
+  float: left;
+}
+
+#controls #bell{
+  margin: 0!important;
+  margin-left: 46px!important;
+  height: 22px!important;
+  width: 23px!important;
+  padding-top: 12px;
+}
+
+#controls .button.last{
+  margin-right: 8px!important;
+}
+
+#controls #buttons{
+  border: 1px solid rgba(128, 128, 128, 0.82);
+  position: absolute;
+  right: 70px;
+  margin: 6px;
+  border-radius: 3px;
+}
+#controls #buttons .button:last-child{
+  border-left: none;
+}
+
+
+#controls #buttons .button{
+  padding: 6px;
+  margin: 0;
+  padding-right: 9px;
+  padding-left: 9px;
+  border-radius: 0;
+  /*box-shadow: inset 0px 0px 20px -8px rgba(132, 114, 114, 0.45);*/
+  background: linear-gradient(#f8f8f8, #dcdfe3);
+  box-shadow: none;
+  border-top: 1px solid #efefef;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-radius: 3px;
+  padding-bottom: 8px;
+  padding-top: 4px;
+}
+
+#controls #buttons .button:hover{
+  background: linear-gradient(#fff, #e2e5e9);
+}
+
+#controls #buttons .button#share{
+  border-radius: 0px;
+  border-right: 1px solid rgba(128, 128, 128, 0.82);
+  border-left: 1px solid rgba(128, 128, 128, 0.82);
+}
+
+#controls #max-btn{
+  transform: scaleX(-1);
+  right: 0;
+  float: right;
+  margin-right: 0!important;
+  padding-left: 12px;
+  background-image: url(images/elementary/window-maximize-symbolic-rtl.svg);
+}
+
+#controls #close-btn {
+    background: none;
+    position: absolute;
+    left: 0;
+    top: 0!important;
+    margin-left: 0!important;
+    padding-left: 12px;
+    background-image: url(images/elementary/close-symbolic.svg);
+}
+#controls #close-btn, #controls #max-btn{
+  background-repeat: no-repeat;
+  background-size: 17px;
+  background-position: 15px;
+  box-shadow: 10px 0px 1px -10px rgba(0,0,0,1);
+}
+
+
+#controls #conv{
+  padding-top: 12px;
+}
+#controls #bell{
+  padding-top: 11px;
+}
+
+html, body , #controls-container{
+  background: rgb(177, 177, 177);
+}
+
+svg *{
+  fill:  #585858!important;
+  color:  #585858!important;
+}
+
+#controls #settings-btn{
+  right: 54px;
+  top: 15px;
+}
+
+#controls #settings-btn:hover{
+  background: #585858;
+}
