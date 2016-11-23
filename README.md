@@ -26,12 +26,12 @@ There is a top secret theme selector:
 
 ## Install
 ### Linux
-
+You can try any of the following methods
 #### Download the app
-[Download the last AppImage](https://github.com/edipox/wunderlistux/releases). An [AppImage](http://appimage.org/) allows you to try the app without installing it. It also allows you to install the app (creating the .desktop file, etc). Just check it out!
+[Download the last AppImage](https://github.com/edipox/wunderlistux/releases/download/0.0.6-AppImage/Wunderlistux-0.0.6-x86_64.AppImage). An [AppImage](http://appimage.org/) allows you to try the app without installing it. It also allows you to install the app (creating the .desktop file, etc). Just check it out!
 
 #### Install script
-[Download the installer](https://raw.githubusercontent.com/edipox/wunderlistux/master/bin/install.sh)
+[Download the installer](https://github.com/edipox/wunderlistux/releases/download/0.0.6-linux-x64/install.sh)
 And run it ```sudo install.sh``` as root. Wunderlistux will be automatically installed on your computer.
 
 ## Thank you!
