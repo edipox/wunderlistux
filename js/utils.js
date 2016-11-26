@@ -54,6 +54,33 @@ var checkEnableShareButton = function(e){
   }
 }
 
+
+const storeButtonConfig = function(position, value){
+  var conf = JSON.parse(localStorage.getItem("window_buttons"));
+  conf[position] = value;
+  localStorage.setItem("window_buttons", JSON.stringify(conf));
+}
+
+const updateWindowButtons = function(button, val){
+  const slider = {
+    LEFT: 0,
+    HIDDEN: 10,
+    RIGHT: 20
+  };
+  if(val == slider.LEFT){
+    $(".window.left ."+button+"-btn").removeClass("hidden");
+    $(".window.right ."+button+"-btn").addClass("hidden");
+    storeButtonConfig(button, val);
+  }else if(val == slider.RIGHT){
+    $(".window.right ."+button+"-btn").removeClass("hidden");
+    $(".window.left ."+button+"-btn").addClass("hidden");
+    storeButtonConfig(button, val);
+  }else if(val == slider.HIDDEN){
+    $(".window ."+button+"-btn").addClass("hidden");
+    storeButtonConfig(button, val);
+  }
+}
+
 var handleExternalLinkClick = function(e){
   const protocol = require('url').parse(e.url).protocol;
   if(protocol === 'http:' || protocol === 'https:'){
