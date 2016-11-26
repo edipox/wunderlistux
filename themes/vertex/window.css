@@ -45,11 +45,11 @@ webview {
     top: 48px;
 }
 
-.stars, #min-btn {
+.stars, .min-btn {
     display: none;
 }
 
-#share, #sort, #more, #max-btn{
+#share, #sort, #more, .max-btn{
   float: right;
 }
 
@@ -59,7 +59,6 @@ webview {
 
 #controls #bell{
   margin: 0!important;
-  margin-left: 46px!important;
   height: 22px!important;
   width: 23px!important;
   padding-top: 12px;
@@ -101,7 +100,7 @@ webview {
   border-left: 1px solid rgba(128, 128, 128, 0.82);
 }
 
-#controls #max-btn{
+#controls .max-btn{
   transform: scaleX(-1);
   right: 0;
   float: right;
@@ -109,7 +108,7 @@ webview {
   padding-left: 12px;
 }
 
-#controls #close-btn {
+#controls .close-btn {
     background: none;
     position: absolute;
     left: 0;

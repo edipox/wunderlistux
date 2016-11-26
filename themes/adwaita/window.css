@@ -38,11 +38,11 @@ webview {
     top: 48px!important;
 }
 
-.stars, #min-btn, #max-btn {
+.stars, .min-btn, .max-btn {
     display: none;
 }
 
-#share, #sort, #more, #close-btn{
+#share, #sort, #more, .close-btn{
   float: right;
 }
 
@@ -52,7 +52,6 @@ webview {
 
 #controls #bell{
   margin: 0!important;
-  margin-left: 18px!important;
   height: 22px!important;
   width: 23px!important;
   padding-top: 12px;
@@ -101,29 +100,21 @@ webview {
   border-left: 1px solid rgba(128, 128, 128, 0.82);
 }
 
-#controls #max-btn{
-  transform: scaleX(-1);
-  right: 0;
-  float: right;
-  margin-right: 0!important;
-  padding-left: 12px;
-  background-image: url(images/elementary/window-maximize-symbolic-rtl.svg);
+#controls .max-btn{
+  background-image: url(images/adwaita/window-maximize-symbolic.svg);
+}
+#controls .min-btn{
+  background-image: url(images/adwaita/window-minimize-symbolic.svg);
 }
 
-#controls #close-btn {
-    background: none;
-    position: relative;
-    right: 0;
-    box-shadow: -10px 0px 1px -10px rgba(0,0,0,1);
-    top: 0!important;
-    margin-left: 0!important;
-    padding-left: 12px;
-    background-image: url(images/elementary/close-symbolic.svg);
+#controls .close-btn {
+    background-image: url(images/adwaita/window-close-symbolic.svg);
 }
-#controls #close-btn, #controls #max-btn{
+
+#controls .close-btn, #controls .max-btn, #controls .min-btn{
   background-repeat: no-repeat;
   background-size: 17px;
-  background-position: 15px;
+  background-position: 7px;
 }
 
 
@@ -150,4 +141,12 @@ svg *{
 
 #controls #settings-btn:hover{
   background: #585858;
+}
+
+.window.right{
+  box-shadow: -10px 0px 1px -10px rgba(0,0,0,1);
+}
+
+.window.left{
+  box-shadow: 10px 0px 1px -10px rgba(0,0,0,1);
 }
