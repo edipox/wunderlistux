@@ -42,7 +42,7 @@ html, body{
   -webkit-app-region: no-drag;
   background: none;
   width: 14px;
-  height: 14px;  
+  height: 14px;
 }
 #controls #settings-btn:hover{
   background: #716e65;
@@ -76,19 +76,20 @@ html, body{
   -webkit-app-region: no-drag;
   height: 100px;
 }
-
-#controls .button, #controls #close-btn{
+#controls .button{
+  width: 17px;
+  height: 17px;
   -webkit-app-region: no-drag;
   font-size: 21px;
-  padding: 14px;
-  padding-right: 15px;
-  padding-left: 15px;
   color: #585858;
   font-weight: 100;
   text-shadow: 0px 0px 3px rgb(226, 226, 226);
-  width: 17px;
-  height: 17px;
+}
 
+#controls > .button, #buttons .button{
+  padding: 14px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 #controls-container{
@@ -160,11 +161,11 @@ webview {
     top: 46px;
 }
 
-.stars, #min-btn {
+.stars, .min-btn {
     display: none;
 }
 
-#share, #sort, #more, #max-btn{
+#share, #sort, #more, .max-btn{
   float: right;
 }
 
@@ -206,14 +207,14 @@ webview {
 }
 
 
-#controls #max-btn{
+#controls .max-btn{
   right: 0;
   float: right;
   margin-right: 0!important;
   padding-left: 12px;
 }
 
-#controls #close-btn {
+#controls .close-btn {
     position: absolute;
     left: 0;
     top: 0;
@@ -221,7 +222,7 @@ webview {
     padding-left: 12px;
 }
 
-#controls #close-btn, #controls #max-btn{
+#controls .close-btn, #controls .max-btn{
   background-repeat: no-repeat;
   background-size: 17px;
   background-position: 10px;
@@ -237,4 +238,57 @@ webview {
 svg *{
   fill: rgb(177, 177, 177)!important;
   color: rgb(177, 177, 177)!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+#controls #bell{
+  margin-left: 10px!important;
+}
+
+#settings-btn, #buttons{
+  position: relative!important;
+  float: right!important;
+  right: auto!important;
+}
+
+.window .button{
+  margin-left: 5px!important;
+  margin-right: 5px!important;
+  position:relative!important;
+  display: block!important;/* tmp */
+}
+.window{
+  top: 0!important;
+  padding:5px!important;
+}
+.window.left{
+  position: relative!important;
+  float: left!important;
+  left:0!important;
+}
+.window.right{
+  position: relative!important;
+  float: right!important;
+  right: 0!important;
+}
+
+.window .button.hidden{
+  display:none!important;
+}
+
+.window.left .button{
+  float: left!important;
+}
+
+.window.right .button{
+  float: right!important;
 }

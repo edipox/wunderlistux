@@ -1,8 +1,8 @@
-jq(document).on("click", "#close-btn", function(e) {
+jq(document).on("click", ".close-btn", function(e) {
     remote.getCurrentWindow().close();
 });
 
-jq(document).on("click", "#min-btn", function(e) {
+jq(document).on("click", ".min-btn", function(e) {
     remote.getCurrentWindow().minimize();
 });
 var maximize = function(e) {
@@ -14,7 +14,7 @@ var maximize = function(e) {
     }
 };
 jq(document).on("dblclick", "#controls", maximize);
-jq(document).on("click", "#max-btn", maximize);
+jq(document).on("click", ".max-btn", maximize);
 
 jq(document).on("click", "#settings-btn", function(e) {
     jq("#settings-panel").appendTo("#popup");
