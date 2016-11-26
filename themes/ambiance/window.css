@@ -20,6 +20,13 @@ html, body , #controls-container{
   width: 100%;
   box-shadow: inset 0px 0px 20px -8px rgba(132, 114, 114, 0.45);
 }
+#settings-panel{
+  background: linear-gradient(#55534b, #42413c);
+  border: 1px solid #636159;
+}
+#settings-panel label{
+  color: #ddd;
+}
 
 #controls button, #controls * .button {
     border-radius: 99px;
@@ -155,11 +162,11 @@ svg *{
   color:  #7a7874!important;
 }
 
-#controls #settings-btn{
+#settings-btn{
   right: 8px;
   top: 12px;
 }
 
-#controls #settings-btn:hover{
+#settings-btn:hover{
   background: #fff;
 }

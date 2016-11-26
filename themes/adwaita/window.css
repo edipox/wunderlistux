@@ -134,12 +134,12 @@ svg *{
   color:  #585858!important;
 }
 
-#controls #settings-btn{
+#settings-btn{
   right: 54px;
   top: 15px;
 }
 
-#controls #settings-btn:hover{
+#settings-btn:hover{
   background: #585858;
 }
 
@@ -149,4 +149,10 @@ svg *{
 
 .window.left{
   box-shadow: 10px 0px 1px -10px rgba(0,0,0,1);
+}
+
+
+#settings-panel {
+  background: linear-gradient(#f8f8f8, #dcdfe3);
+  border: 1px solid #efefef;
 }

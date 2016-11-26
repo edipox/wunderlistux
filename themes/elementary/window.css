@@ -137,10 +137,18 @@ svg *{
   color:  #585858!important;
 }
 
-#controls #settings-btn{
+#settings-btn{
   right: 38px;
   top: 15px;
 }
-#controls #settings-btn:hover{
+#settings-btn:hover{
   background: #585858;
+}
+
+#settings-panel{
+  background: rgba(222, 222, 222, 1);
+  border: 1px solid #efefef;
+}
+#settings-panel label{
+  color:  #585858;
 }

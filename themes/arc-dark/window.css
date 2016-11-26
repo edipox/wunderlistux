@@ -25,7 +25,13 @@ html, body , #controls-container{
   width: 100%;
   border:none;
 }
-
+#settings-panel{
+  background: #2F343F;
+  border: 1px solid #22242d;
+}
+#settings-panel label{
+  color: #ddd;
+}
 #controls button, #controls * .button {
     border-radius: 99px;
     padding: 7px;
@@ -142,11 +148,11 @@ svg *{
   color: #D3DAE3!important;
 }
 
-#controls #settings-btn{
+#settings-btn{
     right: 46px;
 }
 
-#controls #settings-btn:hover{
+#settings-btn:hover{
   background:#fff;
 }
 
