@@ -13,17 +13,25 @@ var maximize = function(e) {
         window.unmaximize();
     }
 };
+
+var showPopup = function(){
+  jq("#overlay").show();
+  jq("#popup").show();
+}
+var hidePopup = function(){
+  jq("#overlay").hide();
+  jq("#popup").hide();
+}
+
 jq(document).on("dblclick", "#controls", maximize);
 jq(document).on("click", ".max-btn", maximize);
 
+jq(document).on("click", "#overlay", hidePopup);
+
+
 jq(document).on("click", "#settings-btn", function(e) {
     jq("#settings-panel").appendTo("#popup");
-    jq("#popup").show();
-    jq("#theme-selector").trigger('click').attr("size","2");
-
-});
-jq(document).on("mouseup", ":not(#settings-btn), :not(#settings-panel)", function() {
-    jq("#popup").hide();
+    showPopup()
 });
 
 jq(document).on('keydown', function(e) {
@@ -52,6 +60,17 @@ jq(document).on("click", "#share", function(e, v){
 
 jq(document).on("change", "#theme-selector", function(e) {
     var theme = jq(e.target).find("option:selected").text();
-    setCustomTheme(theme)
-    jq("#popup").hide();
+    setCustomTheme(theme);
+});
+
+
+$(".slider").slider({
+  step: 10,
+  max: 20,
+  min: 0,
+  slide: function( event, ui ) {
+    const button = $(this).parent().data("button");
+    const val = ui.value;
+    updateWindowButtons(button, val);
+  }
 });

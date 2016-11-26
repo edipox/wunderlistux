@@ -148,9 +148,11 @@ svg *{
   fill: #c3c7d4!important;
   color: #c3c7d4!important;
 }
+#settings-panel{
+  box-shadow: none;
+}
 
-
-#controls #settings-btn{
+#settings-btn{
     right: 46px;
 }
 .window{

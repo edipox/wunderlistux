@@ -33,7 +33,9 @@
   "dependencies": {
     "electron-window-state": "^3.1.0"
   },
-  "keywords": ["wunderlist"],
+  "keywords": [
+    "wunderlist"
+  ],
   "bugs": "https://github.com/edipox/wunderlistux/issues",
   "license": "MIT",
   "repository": "https://github.com/edipox/wunderlistux",
