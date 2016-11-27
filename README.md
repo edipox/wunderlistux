@@ -8,30 +8,37 @@ Screenshots taken in the most awesome indie OS: [elementary OS (Loki)](http://el
 ![Screenshots](/images/wunderlistux.png)
 
 ### Ambiance
-![Screenshots](/images/wunderlistux-ambiance.png)
+![Screenshots](/images/ambiance.png)
+
+### Arc Light
+![Screenshots](/images/arc.png)
 
 ### Arc Dark
-![Screenshots](/images/wunderlistux-arc-dark.png)
+![Screenshots](/images/arc-dark.png)
 
 ### Adwaita
-![Screenshots](/images/wunderlistux-adwaita.png)
+![Screenshots](/images/adwaita.png)
 
-And others
 
-## Themes
-There is a top secret theme selector:
+## Settings
+There is a top secret settings button:
 
-![Screenshots](/images/theme-selector.png)
+![Screenshots](/images/settings-button.png)
+
+That opens this settings panel:
+
+![Screenshots](/images/settings-panel.png)
+
 
 
 ## Install
 ### Linux
 You can try any of the following methods
 #### Download the app
-[Download the last AppImage](https://github.com/edipox/wunderlistux/releases/download/0.0.6-AppImage/Wunderlistux-0.0.6-x86_64.AppImage). An [AppImage](http://appimage.org/) allows you to try the app without installing it. It also allows you to install the app (creating the .desktop file, etc). Just check it out!
+[Download the last AppImage](https://github.com/edipox/wunderlistux/releases/download/0.0.7/Wunderlistux-0.0.7-x86_64.AppImage). An [AppImage](http://appimage.org/) allows you to try the app without installing it. It also allows you to install the app (creating the .desktop file, etc). Just check it out!
 
 #### Install script
-[Download the installer](https://github.com/edipox/wunderlistux/releases/download/0.0.6-linux-x64/install.sh)
+[Download the installer](https://github.com/edipox/wunderlistux/releases/download/0.0.7/install.sh)
 And run it ```sudo install.sh``` as root. Wunderlistux will be automatically installed on your computer.
 
 ## Thank you!
