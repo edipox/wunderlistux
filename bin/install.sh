@@ -22,9 +22,9 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 if [ $KERNEL = 'Linux' ] && [ $ARCH = 'x86_64' ]; then
-  URL='https://github.com/edipox/wunderlistux/archive/0.0.6-linux-x64.tar.gz'
+  URL='https://github.com/edipox/wunderlistux/releases/download/0.0.7/Wunderlistux-linux-x64-build.tar.gz'
 else
-  URL='https://github.com/edipox/wunderlistux/archive/0.0.6-linux-ia32.tar.gz'
+  URL='https://github.com/edipox/wunderlistux/releases/download/0.0.7/Wunderlistux-linux-ia32-build.tar.gz'
 fi
 
 # download builded application and extract in /opt directory
