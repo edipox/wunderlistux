@@ -5,29 +5,44 @@ An electron wrapper for wunderlist made with :heart: for Linux (specially for [e
 Screenshots taken in the most awesome indie OS: [elementary OS (Loki)](http://elementary.io)
 
 ### Elementary
-![Screenshots](/images/wunderlistux.png)
+<p align="center">
+  <img alt="elementary screenshot" src="/images/wunderlistux.png" />
+</p>
 
 ### Ambiance
-![Screenshots](/images/ambiance.png)
+<p align="center">
+  <img alt="ambiance screenshot" src="/images/ambiance.png" />
+</p>
 
 ### Arc Light
-![Screenshots](/images/arc.png)
+<p align="center">
+  <img alt="arc screenshot" src="/images/arc.png" />
+</p>
 
 ### Arc Dark
-![Screenshots](/images/arc-dark.png)
+<p align="center">
+  <img alt="arc dark screenshot" src="/images/arc-dark.png" />
+</p>
 
 ### Adwaita
-![Screenshots](/images/adwaita.png)
+<p align="center">
+  <img alt="adwaita screenshot" src="/images/adwaita.png" />
+</p>
 
 
 ## Settings
 There is a top secret settings button:
+<p align="center">
+  <img alt="settings button screenshot" src="/images/settings-button.png" />
+</p>
 
-![Screenshots](/images/settings-button.png)
+
 
 That opens this settings panel:
+<p align="center">
+  <img alt="settings panel screenshot" src="/images/settings-panel.png" />
+</p>
 
-![Screenshots](/images/settings-panel.png)
 
 
 
