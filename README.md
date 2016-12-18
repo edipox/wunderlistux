@@ -59,9 +59,7 @@ And run it ```sudo install.sh``` as root. Wunderlistux will be automatically ins
 ## Thank you!
 If you like the app please :star: the github project.
 
-If you super liked it  [buy me a coffee :coffee:](http://ko-fi.com/A553N9).
-
-If you disliked it you still could :star: the github project and [buy me a coffee :coffee:](http://ko-fi.com/A553N9) :)
+If you disliked it you still could :star: the project :)
 
 
 ## Building
@@ -99,6 +97,7 @@ In the project root: ```build```
 * Add support for other OSs.
 
 ## Credits
+* Special thanks to the [impressive contributors](https://github.com/edipox/wunderlistux/graphs/contributors).
 * Those amazing icons where stolen from [elementary OS](http://elementary.io). Here is the [github project](https://github.com/elementary/icons). I think those were made by [Daniel Foré](https://github.com/danrabbit) and [Sam Hewitt](https://github.com/snwh).
 * Inspired by [Caprine](https://github.com/sindresorhus/caprine) and [Skype-Electron](https://github.com/GyozaGuy/Skype-Electron)
 * App icon from https://www.iconfinder.com/megavyto98
