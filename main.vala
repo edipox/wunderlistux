@@ -59,16 +59,16 @@ public class Wunderlistux :  Window {
       this.set_geometry_hints(null, geo, Gdk.WindowHints.MIN_SIZE | Gdk.WindowHints.MAX_SIZE);
 
       // Custom location:
-  		string settings_dir = Path.get_dirname ("/home/edipo/wunderlistux/data");
-  		SettingsSchemaSource sss = new SettingsSchemaSource.from_directory (settings_dir, null, false);
-  		SettingsSchema schema = sss.lookup ("org.wunderlistux.wunderlist", false);
-  		if (sss.lookup == null) {
-  			stdout.printf ("ID not found.");
-        return;
-  		}
-
-  		this.settings = new GLib.Settings.full (schema, null, null);
-      // this.settings = new GLib.Settings ("org.wunderlistux.wunderlist");
+  		// string settings_dir = Path.get_dirname ("/home/edipo/wunderlistux/data");
+  		// SettingsSchemaSource sss = new SettingsSchemaSource.from_directory (settings_dir, null, false);
+  		// SettingsSchema schema = sss.lookup ("org.wunderlistux.wunderlist", false);
+  		// if (sss.lookup == null) {
+  		// 	stdout.printf ("ID not found.");
+      //   return;
+  		// }
+      //
+  		// this.settings = new GLib.Settings.full (schema, null, null);
+      this.settings = new GLib.Settings ("org.wunderlistux.wunderlist");
 
       // restore main window size and position
       this.opening_x = settings.get_int ("opening-x");
