@@ -1,0 +1,93 @@
+<schemalist>
+  <schema id="org.wunderlistux.wunderlist" path="/org/wunderlistux/wunderlist/" gettext-domain="wunderlist">
+
+    <key name="update-interval" type="i">
+      <default>2</default>
+      <summary>update-interval</summary>
+      <description>
+        Interval to fetch updates
+      </description>
+    </key>
+
+    <key name="activity-notification" type="b">
+      <default>false</default>
+      <summary>activity-notification</summary>
+      <description>
+        Desktop notifications for new activities
+      </description>
+    </key>
+
+    <key name="mention-notification" type="b">
+      <default>true</default>
+      <summary>mention-notification</summary>
+      <description>
+        Desktop notifications for new mentions
+      </description>
+    </key>
+
+    <key name="dm-notification" type="b">
+      <default>true</default>
+      <summary>dm-notification</summary>
+      <description>
+        Desktop notifications for new direct messages
+      </description>
+    </key>
+
+    <key name="limit-notifications" type="i">
+      <default>1</default>
+      <summary>Limit Notifications</summary>
+      <description>After limit, only show a summary notification.</description>
+    </key>
+
+    <key name="window-width" type="i">
+      <default>575</default>
+      <summary>Window Width</summary>
+      <description>Saves the window width for restoring it later.</description>
+    </key>
+
+    <key name="window-height" type="i">
+      <default>300</default>
+      <summary>Window Height</summary>
+      <description>Saves the window height for restoring it later.</description>
+    </key>
+
+    <key name="opening-x" type="i">
+      <default>-1</default>
+      <summary>X position of window</summary>
+      <description>Saves the window’s X position for restoring it later.</description>
+    </key>
+
+    <key name="opening-y" type="i">
+      <default>-1</default>
+      <summary>Y position of window</summary>
+      <description>Saves the window’s Y position for restoring it later.</description>
+    </key>
+
+    <key name="compose-opening-x" type="i">
+      <default>-1</default>
+      <summary>X position of compose window</summary>
+      <description>Saves the window’s X position for restoring it later.</description>
+    </key>
+
+    <key name="compose-opening-y" type="i">
+      <default>-1</default>
+      <summary>Y position of compose window</summary>
+      <description>Saves the window’s Y position for restoring it later.</description>
+    </key>
+
+    <key name="retrieve-count" type="s">
+      <default>"20"</default>
+      <summary>Retrieve count</summary>
+      <description>Specifies the maximum number of records to retrieve in each update. Must be less than or equal to 200.</description>
+    </key>
+
+    <key name="status-icon" type="b">
+      <default>true</default>
+      <summary>status-icon</summary>
+      <description>
+        Show a status icon in system tray, if supported
+      </description>
+    </key>
+
+  </schema>
+</schemalist>

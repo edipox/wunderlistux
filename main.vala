@@ -3,8 +3,8 @@ using Soup;
 using WebKit;
 
 
-public class DorisConfig {
-	const string home_dir_subdir = ".doris";
+public class WunderlistuxConfig {
+	const string home_dir_subdir = ".wunderlistux";
 
 	public static string get_dir() {
 		return Path.build_filename(GLib.Environment.get_variable("HOME"), home_dir_subdir);
@@ -32,17 +32,86 @@ public class Wunderlistux :  Window {
     private ToolButton more_button;
     private string home_subdir;
 
+
+    public signal void save_state();
+    public int opening_x;
+    public int opening_y;
+    public int window_width;
+    public int window_height;
+
+
+    public GLib.Settings settings;
+
     public Wunderlistux () {
-        set_default_size (800, 600);
+      this.opening_x = -1;
+      this.opening_y = -1;
+      this.window_width = -1;
+      this.window_height = -1;
+      this.delete_event.connect (on_delete_event);
 
-        try {
-            this.protocol_regex = new Regex (".*://.*");
-        } catch (RegexError e) {
-            critical ("%s", e.message);
+      // Set up geometry
+      Gdk.Geometry geo = new Gdk.Geometry();
+      geo.min_width = 720;
+      geo.min_height = 700;
+      geo.max_width = 2775;
+      geo.max_height = 2048;
+
+      this.set_geometry_hints(null, geo, Gdk.WindowHints.MIN_SIZE | Gdk.WindowHints.MAX_SIZE);
+
+      // Custom location:
+  		string settings_dir = Path.get_dirname ("/home/edipo/wunderlistux/data");
+  		SettingsSchemaSource sss = new SettingsSchemaSource.from_directory (settings_dir, null, false);
+  		SettingsSchema schema = sss.lookup ("org.wunderlistux.wunderlist", false);
+  		if (sss.lookup == null) {
+  			stdout.printf ("ID not found.");
+        return;
+  		}
+
+  		this.settings = new GLib.Settings.full (schema, null, null);
+      // this.settings = new GLib.Settings ("org.wunderlistux.wunderlist");
+
+      // restore main window size and position
+      this.opening_x = settings.get_int ("opening-x");
+      this.opening_y = settings.get_int ("opening-y");
+      this.window_width = settings.get_int ("window-width");
+      this.window_height = settings.get_int ("window-height");
+
+      this.restore_window ();
+
+      try {
+          this.protocol_regex = new Regex (".*://.*");
+      } catch (RegexError e) {
+          critical ("%s", e.message);
+      }
+
+      create_widgets ();
+      connect_signals ();
+    }
+
+    private bool on_delete_event () {
+        this.save_window ();
+        this.save_state();
+        base.hide_on_delete ();
+        return true;
+    }
+
+    public void save_window () {
+        this.get_position (out opening_x, out opening_y);
+        this.get_size (out window_width, out window_height);
+    }
+
+    public void restore_window () {
+        if (this.opening_x > 0 && this.opening_y > 0){
+            this.move (this.opening_x, this.opening_y);
         }
+        if( this.window_width > 0 && this.window_height > 0 ) {
+            this.resize (this.window_width, this.window_height);
+        }
+    }
 
-        create_widgets ();
-        connect_signals ();
+    public override void show () {
+        base.show ();
+        this.restore_window ();
     }
 
     private void create_widgets () {
@@ -63,10 +132,9 @@ public class Wunderlistux :  Window {
         img = new Image.from_icon_name ("contact-new-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
         this.share_button.set_icon_widget (img);
 
-				// Create the window of this application and show it
-				this.set_default_size (550, 680);
+
         this.web_view = new WebView ();
-        this.home_subdir = DorisConfig.get_dir();
+        this.home_subdir = WunderlistuxConfig.get_dir();
 		    DirUtils.create(this.home_subdir, 0700);
         this.web_view.web_context.get_cookie_manager().set_persistent_storage(Path.build_filename(this.home_subdir, "cookies.txt"), WebKit.CookiePersistentStorage.TEXT);
         var scrolled_window = new ScrolledWindow (null, null);
@@ -77,7 +145,7 @@ public class Wunderlistux :  Window {
 				Gtk.HeaderBar headerbar = new Gtk.HeaderBar();
         headerbar.show_close_button = true;
         var box = new Box (Orientation.HORIZONTAL, 3);
-        headerbar.title = "Window";
+        headerbar.title = "Wunderlistux";
 				box.add(this.notifications_button);
 				box.add(this.conversations_button);
         var group_box = new Box (Orientation.HORIZONTAL, 3);
@@ -85,15 +153,20 @@ public class Wunderlistux :  Window {
         group_box.pack_end (this.share_button, false, false, 0);
         group_box.pack_end (this.more_button, false, false, 0);
         this.set_titlebar(headerbar);
+
         var vbox = new VBox (false, 0);
 				vbox.add (scrolled_window);
         headerbar.pack_start(box);
         headerbar.pack_end(group_box);
         add (vbox);
+
+        this.destroy.connect(on_exit);
+        this.hide.connect(on_exit);
+        this.remove.connect(on_exit);
     }
 
     public void load_styles(){
-      var style = "#user-toolbar .stream-counts{ position: absolute!important; top: -5%!important; left: 47%!important; } #list-toolbar{ position: absolute!important; top: -48px!important; right: 32px!important; } .popover{ left: 20px!important; top: 4px!important; } #wunderlist-base .popover.bottom .arrow{ display: none!important; }";
+      var style = "#user-toolbar{ display:none; } #list-toolbar{ position: absolute!important; top: -48px!important; right: 32px!important;  } .popover{ left: 20px!important; top: 4px!important; } #wunderlist-base .popover.bottom .arrow{ display: none!important; }";
       var script = "jQuery('#window_theme_container').remove(); ";
       script = script + "jQuery('<style id=\"window_theme_container\">"+ style +"</style>').appendTo('body');";
       this.web_view.run_javascript(script, null);
@@ -124,11 +197,23 @@ public class Wunderlistux :  Window {
         this.web_view.load_uri (Wunderlistux.HOME_URL);
     }
 
+    private void on_exit() {
+      // save window size and position
+      int x, y, w, h;
+      this.get_position (out x, out y);
+      this.get_size (out w, out h);
+      this.settings.set_int ("opening-x", x);
+      this.settings.set_int ("opening-y", y);
+      this.settings.set_int ("window-width", w);
+      this.settings.set_int ("window-height", h);
+    }
+
+
     public static int main (string[] args) {
         Gtk.init (ref args);
 
-        var browser = new Wunderlistux ();
-        browser.start ();
+        var win = new Wunderlistux ();
+        win.start ();
 
         Gtk.main ();
 
