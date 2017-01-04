@@ -117,7 +117,8 @@ public class Wunderlistux :  Window {
     private void create_widgets () {
         this.notifications_button = new ToolButton(null, null);
 
-		    Image img = new Image.from_icon_name ("notification-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+		    // Image img = new Image.from_icon_name ("notification-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+        Image img = new Image.from_icon_name ("document-open-recent-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
         this.notifications_button.set_icon_widget (img);
         this.conversations_button = new ToolButton(null, null);
         img = new Image.from_icon_name ("media-view-subtitles-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
@@ -144,13 +145,13 @@ public class Wunderlistux :  Window {
 				// add headerbar with button
 				Gtk.HeaderBar headerbar = new Gtk.HeaderBar();
         headerbar.show_close_button = true;
-        var box = new Box (Orientation.HORIZONTAL, 3);
+        var box = new Box (Orientation.HORIZONTAL, 0);
         headerbar.title = "Wunderlistux";
-				box.add(this.notifications_button);
-				box.add(this.conversations_button);
-        var group_box = new Box (Orientation.HORIZONTAL, 3);
-        group_box.pack_start (this.sort_button, false, false, 0);
-        group_box.pack_end (this.share_button, false, false, 0);
+				box.pack_start(this.notifications_button, false, false, 12);
+				box.pack_end(this.conversations_button, false, false, 8);
+        var group_box = new Box (Orientation.HORIZONTAL, 0);
+        group_box.pack_start (this.sort_button, false, false, 10);
+        group_box.pack_end (this.share_button, false, true, 13);
         group_box.pack_end (this.more_button, false, false, 0);
         this.set_titlebar(headerbar);
 
