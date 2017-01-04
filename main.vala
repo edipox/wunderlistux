@@ -1,10 +1,25 @@
 using Gtk;
+using Soup;
 using WebKit;
+
+
+public class DorisConfig {
+	const string home_dir_subdir = ".doris";
+
+	public static string get_dir() {
+		return Path.build_filename(GLib.Environment.get_variable("HOME"), home_dir_subdir);
+	}
+
+	public static string get_path(string file) {
+		return Path.build_filename(GLib.Environment.get_variable("HOME"), home_dir_subdir, file);
+	}
+}
+
 
 public class Wunderlistux :  Window {
 
     // private const string TITLE = "Wunderlistux";
-    private const string HOME_URL = "https://www.wunderlist.com/#/lists/inbox";
+    private const string HOME_URL = "https://www.wunderlist.com/webapp";
     private const string DEFAULT_PROTOCOL = "https";
 
     private Regex protocol_regex;
@@ -18,6 +33,7 @@ public class Wunderlistux :  Window {
     private ToolButton sort_button;
     private ToolButton share_button;
     private ToolButton more_button;
+    private string home_subdir;
 
     public Wunderlistux () {
         // this.title = Wunderlistux.TITLE;
@@ -66,12 +82,19 @@ public class Wunderlistux :  Window {
 
 
         this.web_view = new WebView ();
+        this.home_subdir = DorisConfig.get_dir();
+		    DirUtils.create(this.home_subdir, 0700);
+
+        this.web_view.web_context.get_cookie_manager().set_persistent_storage(Path.build_filename(this.home_subdir, "cookies.txt"), WebKit.CookiePersistentStorage.TEXT);
+
+
         var scrolled_window = new ScrolledWindow (null, null);
         scrolled_window.set_policy (PolicyType.AUTOMATIC, PolicyType.AUTOMATIC);
         scrolled_window.add (this.web_view);
 				scrolled_window.add (this.web_view);
         // this.status_bar = new Label ("Welcome");
         // this.status_bar.xalign = 0;
+
 
 
 				// add headerbar with button
@@ -119,11 +142,27 @@ public class Wunderlistux :  Window {
         // this.web_view.title_changed.connect ((source, frame, title) => {
         //     this.title = "%s - %s".printf (title, Wunderlistux.TITLE);
         // });
-        this.web_view.load_committed.connect ((source, frame) => {
+        this.web_view.ready_to_show.connect (() => {
+            // this.web_view.execute_script("document.getElementsByTagName('form')[0].style='display:none'");
             // this.url_bar.text = frame.get_uri ();
             update_buttons ();
         });
-        // this.notifications_button.clicked.connect (this.web_view.go_back);
+        this.conversations_button.clicked.connect ((args) => {
+          this.web_view.run_javascript("jQuery('[data-path=\"conversations\"]').click()", null);
+        });
+        this.notifications_button.clicked.connect ((args) => {
+          this.web_view.run_javascript("jQuery('[data-path=\"activities\"]').click()", null);
+        });
+        this.share_button.clicked.connect ((args) => {
+          this.web_view.run_javascript("jQuery('[data-menu=\"share\"]').click()", null);
+        });
+        this.sort_button.clicked.connect ((args) => {
+          this.web_view.run_javascript("jQuery('[data-menu=\"sort\"]').click()", null);
+        });
+        this.more_button.clicked.connect ((args) => {
+          this.web_view.run_javascript("jQuery('[data-menu=\"more\"]').click()", null);
+        });
+        
         // this.conversations_button.clicked.connect (this.web_view.go_forward);
         // this.sort_button.clicked.connect (this.web_view.reload);
     }
@@ -143,7 +182,8 @@ public class Wunderlistux :  Window {
 
     public void start () {
         show_all ();
-        this.web_view.open (Wunderlistux.HOME_URL);
+
+        this.web_view.load_uri (Wunderlistux.HOME_URL);
     }
 
     public static int main (string[] args) {
