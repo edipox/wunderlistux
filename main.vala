@@ -37,6 +37,7 @@ public class Wunderlistux :  Window {
 
     public Wunderlistux () {
         // this.title = Wunderlistux.TITLE;
+        this.title = "Wunderlist";
         set_default_size (800, 600);
 
         try {
@@ -79,8 +80,6 @@ public class Wunderlistux :  Window {
 				// window.window_position = WindowPosition.CENTER;
 				// window.set_border_width(10);
 
-
-
         this.web_view = new WebView ();
         this.home_subdir = DorisConfig.get_dir();
 		    DirUtils.create(this.home_subdir, 0700);
@@ -91,7 +90,6 @@ public class Wunderlistux :  Window {
         var scrolled_window = new ScrolledWindow (null, null);
         scrolled_window.set_policy (PolicyType.AUTOMATIC, PolicyType.AUTOMATIC);
         scrolled_window.add (this.web_view);
-				scrolled_window.add (this.web_view);
         // this.status_bar = new Label ("Welcome");
         // this.status_bar.xalign = 0;
 
@@ -136,17 +134,24 @@ public class Wunderlistux :  Window {
         add (vbox);
     }
 
+    public void load_styles(){
+      var style = "#user-toolbar .stream-counts{ position: absolute!important; top: -5%!important; left: 47%!important; } #list-toolbar{ position: absolute!important; top: -48px!important; right: 32px!important; } .popover{ left: 20px!important; top: 4px!important; } #wunderlist-base .popover.bottom .arrow{ display: none!important; }";
+      var script = "jQuery('#window_theme_container').remove(); ";
+      script = script + "jQuery('<style id=\"window_theme_container\">"+ style +"</style>').appendTo('body');";
+      // script = "var onLoaded = function(){ "+script+"; console.error('executed!') };";
+      // script = script + " onLoaded(); ";
+      // script = script + " jQuery.wait = function(ms) { var defer = jQuery.Deferred(); setTimeout(function() { defer.resolve(); }, ms); return defer;   }; jQuery.wait(100).then(onLoaded); jQuery.wait(1000).then(onLoaded); jQuery.wait(6000).then(onLoaded); jQuery.wait(15000).then(onLoaded);";
+      this.web_view.run_javascript(script, null);
+    }
+
     private void connect_signals () {
         this.destroy.connect (Gtk.main_quit);
         // this.url_bar.activate.connect (on_activate);
-        // this.web_view.title_changed.connect ((source, frame, title) => {
-        //     this.title = "%s - %s".printf (title, Wunderlistux.TITLE);
-        // });
-        this.web_view.ready_to_show.connect (() => {
-            // this.web_view.execute_script("document.getElementsByTagName('form')[0].style='display:none'");
-            // this.url_bar.text = frame.get_uri ();
-            update_buttons ();
-        });
+        // this.web_view.load_changed.connect (load_styles);
+        // this.web_view.ready_to_show.connect (load_styles);
+        this.web_view.resource_load_started.connect (load_styles);
+        // load_styles();
+
         this.conversations_button.clicked.connect ((args) => {
           this.web_view.run_javascript("jQuery('[data-path=\"conversations\"]').click()", null);
         });
@@ -162,15 +167,15 @@ public class Wunderlistux :  Window {
         this.more_button.clicked.connect ((args) => {
           this.web_view.run_javascript("jQuery('[data-menu=\"more\"]').click()", null);
         });
-        
+
         // this.conversations_button.clicked.connect (this.web_view.go_forward);
         // this.sort_button.clicked.connect (this.web_view.reload);
     }
 
-    private void update_buttons () {
+    // private void update_buttons () {
         // this.notifications_button.sensitive = this.web_view.can_go_back ();
         // this.conversations_button.sensitive = this.web_view.can_go_forward ();
-    }
+    // }
 
     // private void on_activate () {
         // var url = this.url_bar.text;
@@ -182,7 +187,6 @@ public class Wunderlistux :  Window {
 
     public void start () {
         show_all ();
-
         this.web_view.load_uri (Wunderlistux.HOME_URL);
     }
 
