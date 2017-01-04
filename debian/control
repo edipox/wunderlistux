@@ -1,0 +1,22 @@
+Source: wunderlistux
+Section: misc
+Priority: optional
+Maintainer: Edipo da Silva <edipox@gmail.com>
+Build-Depends: cmake (>= 2.8),
+               libglib2.0-dev,
+               libgtk-3-dev (>= 3.14),
+               libgtksourceview-3.0-dev,
+               libjson-glib-dev,
+               gtk+-3.0,
+               libsoup-2.4,
+               webkit2gtk-4.0,
+               valac (>= 0.24)
+Standards-Version: 3.9.3
+Homepage: https://wunderlistuxapp.github.io
+
+Package: wunderlistux
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends: dpkg (>= 1.15.6)
+Description: Wunderlist client for elementary OS
+ Wunderlistux is a Wunderlist client for elementary OS

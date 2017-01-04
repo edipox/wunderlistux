@@ -92,6 +92,9 @@ npm install
 ## Build
 
 valac --pkg gtk+-3.0 --pkg webkitgtk-3.0 main.vala
+valac --pkg gtk+-3.0 --pkg webkit2gtk-4.0 --pkg libsoup-2.4 main.vala
+
+
 
 ### Build a release
 In the project root: ```./bin/build-linux-x64.sh``` or ```./bin/build-linux-ia32.sh```
@@ -105,5 +108,4 @@ In the project root: ```build```
 ## Credits
 * Those amazing icons where stolen from [elementary OS](http://elementary.io). Here is the [github project](https://github.com/elementary/icons). I think those were made by [Daniel Foré](https://github.com/danrabbit) and [Sam Hewitt](https://github.com/snwh).
 * Inspired by [Caprine](https://github.com/sindresorhus/caprine) and [Skype-Electron](https://github.com/GyozaGuy/Skype-Electron)
-* App icon from https://www.iconfinder.com/megavyto98
-* [AppImage app icon](https://commons.wikimedia.org/wiki/File:Wunderlist.png)
+* Icon made by [Darius Dan](http://www.flaticon.com/free-icon/wunderlist_214554#term=wunderlist&page=1&position=2) from www.flaticon.com 

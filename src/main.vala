@@ -58,16 +58,6 @@ public class Wunderlistux :  Window {
 
       this.set_geometry_hints(null, geo, Gdk.WindowHints.MIN_SIZE | Gdk.WindowHints.MAX_SIZE);
 
-      // Custom location:
-  		// string settings_dir = Path.get_dirname ("/home/edipo/wunderlistux/data");
-  		// SettingsSchemaSource sss = new SettingsSchemaSource.from_directory (settings_dir, null, false);
-  		// SettingsSchema schema = sss.lookup ("org.wunderlistux.wunderlist", false);
-  		// if (sss.lookup == null) {
-  		// 	stdout.printf ("ID not found.");
-      //   return;
-  		// }
-      //
-  		// this.settings = new GLib.Settings.full (schema, null, null);
       this.settings = new GLib.Settings ("org.wunderlistux.wunderlist");
 
       // restore main window size and position
@@ -117,20 +107,19 @@ public class Wunderlistux :  Window {
     private void create_widgets () {
         this.notifications_button = new ToolButton(null, null);
 
-		    // Image img = new Image.from_icon_name ("notification-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-        Image img = new Image.from_icon_name ("document-open-recent-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+        Image img = new Image.from_icon_name ("wunderlist-notifications", Gtk.IconSize.SMALL_TOOLBAR);
         this.notifications_button.set_icon_widget (img);
         this.conversations_button = new ToolButton(null, null);
-        img = new Image.from_icon_name ("media-view-subtitles-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+        img = new Image.from_icon_name ("wunderlist-conversations", Gtk.IconSize.SMALL_TOOLBAR);
         this.conversations_button.set_icon_widget (img);
         this.sort_button = new ToolButton(null, null);
-        img = new Image.from_icon_name ("view-sort-ascending-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+        img = new Image.from_icon_name ("wunderlist-sort", Gtk.IconSize.SMALL_TOOLBAR);
         this.sort_button.set_icon_widget (img);
         this.more_button = new ToolButton(null, null);
-        img = new Image.from_icon_name ("view-more-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+        img = new Image.from_icon_name ("wunderlist-more", Gtk.IconSize.SMALL_TOOLBAR);
         this.more_button.set_icon_widget (img);
         this.share_button = new ToolButton(null, null);
-        img = new Image.from_icon_name ("contact-new-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+        img = new Image.from_icon_name ("wunderlist-share", Gtk.IconSize.SMALL_TOOLBAR);
         this.share_button.set_icon_widget (img);
 
 

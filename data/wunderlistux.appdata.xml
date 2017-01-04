@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+ <id type="desktop">wunderlistux.desktop</id>
+ <licence>CC0</licence>
+ <name>Wunderlistux</name>
+ <summary>Wunderlistux is a beautiful Wunderlist client for Linux</summary>
+ <description>
+  <p>
+Wunderlistux is fast, easy to use and works great. It provides all the essential Wunderlist features and allows you to enjoy Wunderlist right on your desktop.
+  </p>
+ </description>
+ <screenshots>
+  <screenshot type="default" width="432" height="777">http://wunderlistuxapp.github.io/screenshot.png</screenshot>
+ </screenshots>
+ <url type="homepage">http://wunderlistuxapp.github.io/</url>
+ <updatecontact>ivoavnunes@gmail.com</updatecontact>
+</application>

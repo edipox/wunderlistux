@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=Wunderlistux
+GenericName=Wunderlist Client
+Comment=Wunderlist client for Linux
+Categories=GTK;Network;X-SuSE-Core-Internet;
+Exec=wunderlistux %U
+Icon=wunderlistux
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/wunderlistux;
+X-GNOME-Gettext-Domain=wunderlistux
+Actions=AboutDialog;
+
+[Desktop Action AboutDialog]
+Exec=wunderlistux --about
+Name=About Wunderlistux
