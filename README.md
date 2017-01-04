@@ -89,6 +89,10 @@ Better check electron-builder's doc for updated install instructions: https://gi
 npm install
 ```
 
+## Build
+
+valac --pkg gtk+-3.0 --pkg webkitgtk-3.0 main.vala
+
 ### Build a release
 In the project root: ```./bin/build-linux-x64.sh``` or ```./bin/build-linux-ia32.sh```
 
