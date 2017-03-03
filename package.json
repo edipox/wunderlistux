@@ -1,6 +1,6 @@
 {
   "name": "Wunderlistux",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "An electron wrapper for wunderlist made with :heart: for Linux",
   "icon": "images/icon.png",
   "build": {
@@ -34,7 +34,7 @@
     "electron-window-state": "^3.1.0"
   },
   "devDependencies": {
-    "electron": "^1.4.6"
+    "electron": "^1.6.1"
   },
   "keywords": [
     "wunderlist"
