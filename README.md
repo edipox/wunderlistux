@@ -74,24 +74,47 @@ sudo apt-get install nodejs npm -y
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 ```
 
-### Install global dependencies
+### Install dependencies
 ```
-sudo npm install electron electron-builder electron-packager electron-prebuilt asar -g
+npm install
 ```
 
 ### Install electron-builder
 Better check electron-builder's doc for updated install instructions: https://github.com/electron-userland/electron-builder/wiki/Multi-Platform-Build
 
-### Install all the dependencies
-```
-npm install
+### Build a release
+
+#### Build Linux tar release
+```bash
+./bin/build-linux-x64.sh
+#or
+./bin/build-linux-ia32.sh
 ```
 
-### Build a release
-In the project root: ```./bin/build-linux-x64.sh``` or ```./bin/build-linux-ia32.sh```
+### Build the rpm package
+```bash
+./node_modules/.bin/build --linux rpm
+```
+
+### Build the deb package
+```bash
+./node_modules/.bin/build --linux deb
+```
 
 ### Build the AppImage
-In the project root: ```build```
+```bash
+./node_modules/.bin/build --linux AppImage
+```
+
+#### Build macOS release
+```bash
+./bin/build-macos.sh
+```
+
+#### Build Windows release
+```bash
+./bin/build-win.sh
+```
 
 ## TODO
 * Add support for other OSs.

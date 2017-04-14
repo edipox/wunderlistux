@@ -4,10 +4,10 @@
   "description": "An electron wrapper for wunderlist made with :heart: for Linux",
   "icon": "images/icon.png",
   "build": {
-    "category": "utility",
     "appId": "com.electron.wunderlistux",
     "icon": "images/icon.png",
     "linux": {
+      "category": "utility",
       "target": [
         "AppImage"
       ]
@@ -31,10 +31,12 @@
     "email": "edipo@openmailbox.org"
   },
   "dependencies": {
+    "electron-packager": "^8.6.0",
     "electron-window-state": "^3.1.0"
   },
   "devDependencies": {
-    "electron": "^1.6.1"
+    "electron": "^1.6.1",
+    "electron-builder": "^16.8.0"
   },
   "keywords": [
     "wunderlist"
