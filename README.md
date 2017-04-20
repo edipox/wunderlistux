@@ -49,7 +49,13 @@ That opens this settings panel:
 ## Install
 ### Linux
 You can try any of the following methods
-#### Download the app
+
+#### Packed app
+* [Wunderlistux_0.0.8_amd64.deb](https://github.com/edipox/wunderlistux/releases/download/Linux-0.0.8/Wunderlistux_0.0.8_amd64.deb)
+* [Wunderlistux-0.0.8.rpm](https://github.com/edipox/wunderlistux/releases/download/Linux-0.0.8/Wunderlistux-0.0.8.rpm)
+
+
+#### AppImage
 [Download the last AppImage](https://github.com/edipox/wunderlistux/releases/download/Linux-0.0.8/Wunderlistux-0.0.8-x86_64.AppImage). An [AppImage](http://appimage.org/) allows you to try the app without installing it. It also allows you to install the app (creating the .desktop file, etc). Just check it out!
 ```
 # You can make the appImage executable as follows
