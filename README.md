@@ -1,6 +1,9 @@
 # Wunderlistux
 An electron wrapper for wunderlist made with :heart: for Linux (specially for [elementary OS](http://elementary.io))
 
+#### Notice: We have some work done on [refactoring Wunderlistux](https://github.com/edipox/wunderlistux/tree/vala_webkit) on [Vala](https://valadoc.org/) and we have plans to add offline support. PRs are welcome! For more info check [this thread](https://github.com/edipox/wunderlistux/issues/18).
+
+
 ## Screenshots
 Screenshots taken in the most awesome indie OS: [elementary OS (Loki)](http://elementary.io)
 
