@@ -30,7 +30,7 @@ fi
 # download builded application and extract in /opt directory
 function install {
   echo 'Downloading package...'
-  wget -q -O /tmp/wunderlistux.tar.gz $URL
+  wget --show-progress --progress=bar:force -q -O /tmp/wunderlistux.tar.gz $URL
   echo 'Extracting package...'
   mkdir /opt/wunderlistux
   tar -zxf /tmp/wunderlistux.tar.gz -C /opt/wunderlistux --strip-components=1
