@@ -23,12 +23,13 @@ app.on('ready', function() {
     minWidth: size.width,
     minHeight: size.height,
     // Window style
-    trasnparent: true,
+    transparent: true,
     frame: false,
     radii: [10,10,10,10],
     // Window state
     x: winState.x,
     y: winState.y,
+    icon: __dirname + '/images/icon.png',
     width: winState.width,
     height: winState.height
   });
