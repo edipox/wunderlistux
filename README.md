@@ -5,7 +5,7 @@ An electron wrapper for wunderlist made with :heart: for Linux (specially for [e
 
 
 ## Screenshots
-Screenshots taken in the most awesome indie OS: [elementary OS (Loki)](http://elementary.io)
+Screenshots taken in the most awesome indie OS ever: [elementary OS (Loki)](http://elementary.io)
 
 ### Elementary
 <p align="center">
@@ -34,7 +34,7 @@ Screenshots taken in the most awesome indie OS: [elementary OS (Loki)](http://el
 
 
 ## Settings
-There is a top secret settings button:
+There is a top secret button for settings:
 <p align="center">
   <img alt="settings button screenshot" src="/images/settings-button.png" />
 </p>
@@ -76,7 +76,7 @@ If you like the app please :star: the github project.
 If you disliked it you still could :star: the project :)
 
 
-## Building
+## Development
 
 ### Install npm
 ```
@@ -95,6 +95,14 @@ npm install
 
 ### Install electron-builder
 Better check electron-builder's doc for updated install instructions: https://github.com/electron-userland/electron-builder/wiki/Multi-Platform-Build
+
+
+### Start the app
+
+Start the app by using the npm script
+```
+npm start
+``` 
 
 ### Build a release
 

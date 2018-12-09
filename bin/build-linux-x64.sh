@@ -2,7 +2,7 @@
 cd $(dirname $0)/../
 
 APPNAME=Wunderlistux
-VERSION=1.6.1
+VERSION=1.6.2
 ./node_modules/.bin/electron-packager . $APPNAME \
   --platform=linux --arch=x64 --electron-version=$VERSION \
   --overwrite=true --asar=false --app_version=0.0.1 \
