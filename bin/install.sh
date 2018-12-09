@@ -22,7 +22,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 if [ $KERNEL = 'Linux' ] && [ $ARCH = 'x86_64' ]; then
-  URL='https://github.com/edipox/wunderlistux/releases/download/0.0.7/Wunderlistux-linux-x64-build.tar.gz'
+  URL='https://github.com/edipox/wunderlistux/releases/download/v0.0.9-linux-x64/Wunderlistux-linux-x64.tar.gz'
 else
   URL='https://github.com/edipox/wunderlistux/releases/download/0.0.7/Wunderlistux-linux-ia32-build.tar.gz'
 fi
